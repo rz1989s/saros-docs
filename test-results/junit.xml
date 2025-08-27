@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="9" failures="0" errors="0" time="2.066">
+  <testsuite name="Saros SDK Documentation Validation" errors="0" failures="0" skipped="1" timestamp="2025-08-27T16:55:31" time="1.926" tests="9">
+    <testcase classname="Saros SDK Documentation Validation should have valid network connection" name="Saros SDK Documentation Validation should have valid network connection" time="0">
+      <skipped/>
+    </testcase>
+    <testcase classname="Saros SDK Documentation Validation should validate PublicKey creation" name="Saros SDK Documentation Validation should validate PublicKey creation" time="0.001">
+    </testcase>
+    <testcase classname="Saros SDK Documentation Validation should validate example documentation files exist" name="Saros SDK Documentation Validation should validate example documentation files exist" time="0.001">
+    </testcase>
+    <testcase classname="Saros SDK Documentation Validation should validate tutorial files exist" name="Saros SDK Documentation Validation should validate tutorial files exist" time="0.001">
+    </testcase>
+    <testcase classname="Saros SDK Documentation Validation should validate TypeScript code blocks in examples" name="Saros SDK Documentation Validation should validate TypeScript code blocks in examples" time="0">
+    </testcase>
+    <testcase classname="Saros SDK Documentation Validation should validate API Explorer component exists" name="Saros SDK Documentation Validation should validate API Explorer component exists" time="0.001">
+    </testcase>
+    <testcase classname="Saros SDK Documentation Validation should validate configuration files" name="Saros SDK Documentation Validation should validate configuration files" time="0">
+    </testcase>
+    <testcase classname="Saros SDK Documentation Validation should validate deployment files" name="Saros SDK Documentation Validation should validate deployment files" time="0">
+    </testcase>
+    <testcase classname="Saros SDK Documentation Validation should validate documentation structure" name="Saros SDK Documentation Validation should validate documentation structure" time="0.001">
+    </testcase>
+  </testsuite>
+</testsuites>

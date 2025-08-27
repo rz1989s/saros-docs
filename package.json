@@ -1,0 +1,109 @@
+{
+  "name": "saros-sdk-docs",
+  "version": "1.0.0",
+  "description": "Comprehensive documentation for Saros Finance SDKs on Solana",
+  "private": true,
+  "homepage": "https://saros-docs.rectorspace.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saros-xyz/saros-sdk-docs"
+  },
+  "keywords": [
+    "saros",
+    "solana",
+    "defi",
+    "sdk",
+    "documentation",
+    "dlmm",
+    "trading"
+  ],
+  "author": "Saros Finance <dev@saros.xyz>",
+  "license": "MIT",
+  "scripts": {
+    "docusaurus": "docusaurus",
+    "start": "docusaurus start",
+    "dev": "docusaurus start --host 0.0.0.0",
+    "build": "docusaurus build",
+    "build:analyze": "npm run build -- --bundle-analyzer",
+    "swizzle": "docusaurus swizzle",
+    "deploy": "docusaurus deploy",
+    "clear": "docusaurus clear",
+    "serve": "docusaurus serve",
+    "serve:build": "docusaurus serve --build --port 3000",
+    "write-translations": "docusaurus write-translations",
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "typecheck": "tsc",
+    "lint": "eslint src --ext .ts,.tsx,.js,.jsx",
+    "lint:fix": "eslint src --ext .ts,.tsx,.js,.jsx --fix",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,md,mdx,json}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,md,mdx,json}\"",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:examples": "jest tests/example-tests.ts",
+    "test:links": "markdown-link-check docs/**/*.md",
+    "test:devnet": "jest --testNamePattern='Devnet'",
+    "test:mainnet": "jest --testNamePattern='Mainnet'",
+    "validate": "node scripts/validate-examples.js",
+    "validate:examples": "node scripts/validate-examples.js",
+    "validate:build": "npm run build && npm run typecheck",
+    "deploy:vercel": "./deploy.sh vercel",
+    "deploy:netlify": "./deploy.sh netlify",
+    "deploy:github": "./deploy.sh github-pages",
+    "deploy:docker": "./deploy.sh docker",
+    "deploy:test": "./deploy.sh test",
+    "docker:build": "docker build -t saros-docs .",
+    "docker:run": "docker run -p 8080:80 saros-docs",
+    "docker:dev": "docker-compose --profile dev up",
+    "docker:prod": "docker-compose --profile prod up -d",
+    "ci": "npm run lint && npm run validate && npm run test:coverage && npm run build",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@docusaurus/core": "3.8.1",
+    "@docusaurus/preset-classic": "3.8.1",
+    "@mdx-js/react": "^3.0.0",
+    "@solana/spl-token": "^0.4.13",
+    "@solana/web3.js": "^1.98.4",
+    "bn.js": "^5.2.2",
+    "clsx": "^2.0.0",
+    "prism-react-renderer": "^2.3.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@docusaurus/module-type-aliases": "3.8.1",
+    "@docusaurus/tsconfig": "3.8.1",
+    "@docusaurus/types": "3.8.1",
+    "@types/jest": "^29.5.5",
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.7.0",
+    "@typescript-eslint/parser": "^6.7.0",
+    "eslint": "^8.50.0",
+    "husky": "^8.0.3",
+    "jest": "^29.7.0",
+    "jest-environment-node": "^29.7.0",
+    "jest-html-reporter": "^3.10.0",
+    "jest-junit": "^16.0.0",
+    "lint-staged": "^14.0.1",
+    "markdown-link-check": "^3.11.2",
+    "prettier": "^3.0.3",
+    "ts-jest": "^29.1.1",
+    "typescript": "~5.6.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 3 chrome version",
+      "last 3 firefox version",
+      "last 5 safari version"
+    ]
+  },
+  "engines": {
+    "node": ">=18.0"
+  }
+}

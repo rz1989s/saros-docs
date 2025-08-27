@@ -1,0 +1,143 @@
+---
+title: API Explorer
+description: Interactive API testing tool for the Saros SDK
+---
+
+import APIExplorer from '@site/src/components/APIExplorer';
+
+# Interactive API Explorer
+
+Test Saros SDK methods directly in your browser without writing any code. This interactive tool allows you to:
+
+- **Test API calls** with real Solana networks (devnet/mainnet)
+- **Explore all SDK methods** with auto-generated documentation
+- **See live examples** and copy-paste ready code
+- **Debug API responses** with detailed error messages
+
+:::tip Pro Tips
+- Start with **devnet** to avoid transaction fees while testing
+- Use the **code examples** section to copy working code to your project
+- Check the **response format** to understand what data is returned
+- Try different **parameter combinations** to see how the API behaves
+:::
+
+<APIExplorer />
+
+## API Categories
+
+### 🏊‍♂️ Pools
+Methods for querying and interacting with Saros liquidity pools:
+- `getPoolInfo` - Get detailed pool information
+- `getAllPools` - List all available pools
+- `getPoolPrice` - Get current pool price
+
+### 🔄 Swaps  
+Methods for token swapping and quote generation:
+- `getQuote` - Get swap quotes with slippage
+- `executeSwap` - Execute token swaps
+- `getSwapHistory` - View swap transaction history
+
+### 📊 Positions
+Methods for managing liquidity positions:
+- `getUserPositions` - Get all user positions
+- `getPositionValue` - Calculate position value
+- `claimFees` - Claim accumulated fees
+
+### 📈 DLMM
+Dynamic Liquidity Market Maker specific methods:
+- `createDLMMPosition` - Create concentrated liquidity positions
+- `getDLMMBins` - Get price bin information
+- `calculateDLMMStrategy` - Analyze DLMM strategies
+
+### 🌾 Farming
+Yield farming and staking methods:
+- `getFarms` - List available farms
+- `getUserFarmPositions` - Get user farming positions
+- `claimFarmRewards` - Claim farming rewards
+
+## Common Use Cases
+
+### Getting Pool Information
+```typescript
+// Get comprehensive pool data
+const poolInfo = await sdk.getPoolInfo(poolId);
+console.log('Pool TVL:', poolInfo.totalLiquidity);
+console.log('Pool APY:', poolInfo.apy);
+console.log('Token Pair:', poolInfo.tokenA.symbol, '/', poolInfo.tokenB.symbol);
+```
+
+### Calculating Swap Quotes
+```typescript
+// Get the best swap quote
+const quote = await sdk.getQuote({
+  inputMint: usdcMint,
+  outputMint: solMint,
+  amount: 100 * 1e6, // $100 USDC
+  slippageBps: 100 // 1% slippage
+});
+
+console.log('Output amount:', quote.outAmount);
+console.log('Price impact:', quote.priceImpact);
+console.log('Route:', quote.routePlan);
+```
+
+### Tracking User Positions
+```typescript
+// Monitor all user positions
+const positions = await sdk.getUserPositions(userAddress);
+
+for (const position of positions) {
+  console.log(`${position.tokenA}/${position.tokenB}:`);
+  console.log('  Value:', position.currentValue);
+  console.log('  P&L:', position.unrealizedPnl);
+  console.log('  Fees:', position.accumulatedFees);
+}
+```
+
+## Network Configuration
+
+The API Explorer supports multiple Solana networks:
+
+- **Devnet** - Free testing environment with faucet tokens
+- **Mainnet** - Production network with real assets  
+- **Testnet** - Alternative testing environment
+
+:::warning Mainnet Usage
+When using mainnet, be aware that:
+- API calls may involve real transaction fees
+- Position creation requires actual tokens
+- Failed transactions will consume SOL for fees
+:::
+
+## Error Handling
+
+Common errors and solutions:
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| `Invalid PublicKey` | Malformed address | Use valid base58 encoded addresses |
+| `Pool not found` | Non-existent pool ID | Check pool exists using `getAllPools` |
+| `Insufficient balance` | Not enough tokens | Add devnet tokens via faucet |
+| `Slippage exceeded` | Price moved too much | Increase slippage tolerance |
+| `Network timeout` | RPC connection issues | Try different RPC endpoint |
+
+## SDK Integration
+
+Once you've tested methods in the explorer, integrate them into your application:
+
+```bash
+npm install @saros-finance/sdk @saros-finance/dlmm-sdk
+```
+
+```typescript
+import { SarosSDK } from '@saros-finance/sdk';
+import { Connection } from '@solana/web3.js';
+
+const connection = new Connection('YOUR_RPC_URL');
+const sdk = new SarosSDK(connection);
+
+// Use the methods you tested in the explorer
+const pools = await sdk.getAllPools();
+```
+
+The API Explorer is a powerful tool for understanding the Saros SDK before implementing it in your applications. Experiment with different parameters and network configurations to find the best approach for your use case.
