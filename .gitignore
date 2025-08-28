@@ -22,6 +22,9 @@ test-results/
 # Misc
 .DS_Store
 
+# Deployment guides (keep private)
+VERCEL_DEPLOYMENT.md
+
 # Logs
 npm-debug.log*
 yarn-debug.log*

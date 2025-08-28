@@ -88,6 +88,11 @@ const sidebars: SidebarsConfig = {
   // Examples sidebar
   examplesSidebar: [
     {
+      type: 'doc',
+      id: 'interactive-examples',
+      label: '🎮 Interactive Examples',
+    },
+    {
       type: 'category',
       label: 'Code Examples',
       items: [
@@ -97,6 +102,8 @@ const sidebars: SidebarsConfig = {
         'examples/liquidity-farming-strategy',
         'examples/staking-rewards-automation',
         'examples/portfolio-analytics-dashboard',
+        'examples/realtime-price-feed',
+        'examples/advanced-mev-protection',
       ],
     },
   ],
