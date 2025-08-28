@@ -7,62 +7,83 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
-/* Saros Finance Brand Colors */
+/* React Native-Inspired Ultra Clean Theme */
 :root {
-  /* Primary Saros Colors */
-  --saros-primary: #667eea;
-  --saros-primary-dark: #5a67d8;
-  --saros-primary-darker: #4c51bf;
-  --saros-primary-darkest: #434190;
-  --saros-primary-light: #7c3aed;
-  --saros-primary-lighter: #8b5cf6;
-  --saros-primary-lightest: #a78bfa;
+  /* React Native Cyan Brand Colors */
+  --rn-primary: #61DAFB;
+  --rn-primary-dark: #20AAD8;
+  --rn-primary-darker: #1A8BB5;
+  --rn-primary-darkest: #156C92;
+  --rn-primary-light: #80E3FC;
+  --rn-primary-lighter: #9FEBFD;
+  --rn-primary-lightest: #BEF3FE;
   
-  /* Saros Secondary Colors */
-  --saros-secondary: #38b2ac;
-  --saros-accent: #ed8936;
-  --saros-success: #48bb78;
-  --saros-warning: #ed8936;
-  --saros-error: #e53e3e;
+  /* Clean Colors */
+  --rn-secondary: #0EA5E9;
+  --rn-accent: #F97316;
+  --rn-success: #22C55E;
+  --rn-warning: #F59E0B;
+  --rn-error: #EF4444;
   
-  /* Apply Saros colors to Docusaurus */
-  --ifm-color-primary: var(--saros-primary);
-  --ifm-color-primary-dark: var(--saros-primary-dark);
-  --ifm-color-primary-darker: var(--saros-primary-darker);
-  --ifm-color-primary-darkest: var(--saros-primary-darkest);
-  --ifm-color-primary-light: var(--saros-primary-light);
-  --ifm-color-primary-lighter: var(--saros-primary-lighter);
-  --ifm-color-primary-lightest: var(--saros-primary-lightest);
+  /* Ultra Clean Backgrounds */
+  --rn-white: #FFFFFF;
+  --rn-gray-50: #F9FAFB;
+  --rn-gray-100: #F3F4F6;
+  --rn-gray-900: #111827;
   
-  /* Typography */
-  --ifm-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --ifm-font-family-monospace: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  /* Apply React Native colors to Docusaurus */
+  --ifm-color-primary: var(--rn-primary);
+  --ifm-color-primary-dark: var(--rn-primary-dark);
+  --ifm-color-primary-darker: var(--rn-primary-darker);
+  --ifm-color-primary-darkest: var(--rn-primary-darkest);
+  --ifm-color-primary-light: var(--rn-primary-light);
+  --ifm-color-primary-lighter: var(--rn-primary-lighter);
+  --ifm-color-primary-lightest: var(--rn-primary-lightest);
+  
+  /* Clean Typography */
+  --ifm-font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  --ifm-font-family-monospace: 'SF Mono', 'Monaco', 'Inconsolata', monospace;
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(102, 126, 234, 0.1);
+  --docusaurus-highlighted-code-line-bg: rgba(97, 218, 251, 0.1);
   
-  /* Spacing and Layout */
-  --ifm-spacing-horizontal: 1.5rem;
-  --ifm-navbar-height: 4rem;
+  /* Minimal Layout */
+  --ifm-spacing-horizontal: 2rem;
+  --ifm-navbar-height: 3.5rem;
+  --ifm-container-width-xl: 1200px;
+  
+  /* Ultra Clean Backgrounds */
+  --ifm-background-color: var(--rn-white);
+  --ifm-background-surface-color: var(--rn-gray-50);
+  --ifm-color-emphasis-100: var(--rn-gray-100);
+  --ifm-color-emphasis-200: #E5E7EB;
+  --ifm-color-emphasis-300: #D1D5DB;
+  
+  /* Minimal Borders */
+  --ifm-global-border-width: 1px;
+  --ifm-global-radius: 4px;
 }
 
-/* Dark mode adjustments */
+/* React Native Dark Mode (Optional) */
 [data-theme='dark'] {
-  --saros-primary: #a78bfa;
-  --saros-primary-dark: #8b5cf6;
-  --saros-primary-darker: #7c3aed;
-  --saros-primary-darkest: #6d28d9;
-  --saros-primary-light: #c4b5fd;
-  --saros-primary-lighter: #ddd6fe;
-  --saros-primary-lightest: #ede9fe;
+  --rn-primary: #80E3FC;
+  --rn-primary-dark: #61DAFB;
+  --rn-primary-darker: #20AAD8;
+  --rn-primary-darkest: #1A8BB5;
+  --rn-primary-light: #9FEBFD;
+  --rn-primary-lighter: #BEF3FE;
+  --rn-primary-lightest: #E0F9FE;
   
-  --ifm-color-primary: var(--saros-primary);
-  --ifm-color-primary-dark: var(--saros-primary-dark);
-  --ifm-color-primary-darker: var(--saros-primary-darker);
-  --ifm-color-primary-darkest: var(--saros-primary-darkest);
-  --ifm-color-primary-light: var(--saros-primary-light);
-  --ifm-color-primary-lighter: var(--saros-primary-lighter);
-  --ifm-color-primary-lightest: var(--saros-primary-lightest);
-  --docusaurus-highlighted-code-line-bg: rgba(167, 139, 250, 0.2);
+  --ifm-color-primary: var(--rn-primary);
+  --ifm-color-primary-dark: var(--rn-primary-dark);
+  --ifm-color-primary-darker: var(--rn-primary-darker);
+  --ifm-color-primary-darkest: var(--rn-primary-darkest);
+  --ifm-color-primary-light: var(--rn-primary-light);
+  --ifm-color-primary-lighter: var(--rn-primary-lighter);
+  --ifm-color-primary-lightest: var(--rn-primary-lightest);
+  --docusaurus-highlighted-code-line-bg: rgba(128, 227, 252, 0.15);
+  
+  --ifm-background-color: var(--rn-gray-900);
+  --ifm-background-surface-color: #1F2937;
 }
 
 /* API Explorer Styles */
@@ -557,4 +578,264 @@
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+/* React Native-Inspired Ultra Clean Theme */
+
+/* Minimal Hero Section */
+.hero {
+  background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%);
+  color: #1F2937;
+  padding: 4rem 0;
+  text-align: center;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #111827;
+  line-height: 1.1;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #6B7280;
+  max-width: 550px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Ultra Clean Cards */
+.card {
+  background: var(--rn-white);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid #F3F4F6;
+  transition: all 0.2s ease;
+  overflow: hidden;
+  padding: 1.5rem;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border-color: var(--rn-primary);
+}
+
+/* Clean Features Section */
+.features {
+  padding: 5rem 0;
+  background: var(--rn-white);
+}
+
+.feature {
+  background: var(--rn-white);
+  border: 1px solid #F3F4F6;
+  border-radius: 8px;
+  padding: 2rem;
+  transition: all 0.2s ease;
+  height: 100%;
+  text-align: center;
+}
+
+.feature:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border-color: var(--rn-primary);
+}
+
+.feature h3 {
+  color: #111827;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.feature p {
+  color: #6B7280;
+  line-height: 1.6;
+}
+
+/* Ultra Clean Navbar */
+.navbar {
+  background: rgba(255, 255, 255, 0.98);
+  border-bottom: 1px solid #F3F4F6;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(4px);
+}
+
+.navbar__brand {
+  font-weight: 700;
+  color: #111827;
+}
+
+.navbar__link {
+  font-weight: 500;
+  color: #6B7280;
+  transition: color 0.2s ease;
+  font-size: 0.95rem;
+}
+
+.navbar__link:hover {
+  color: var(--rn-primary);
+}
+
+/* Minimal Buttons */
+.button {
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+  font-size: 0.9rem;
+  padding: 0.75rem 1.5rem;
+}
+
+.button--primary {
+  background: var(--rn-primary);
+  color: #1F2937;
+  border: none;
+  box-shadow: none;
+}
+
+.button--primary:hover {
+  background: var(--rn-primary-dark);
+  color: white;
+  transform: translateY(-1px);
+}
+
+.button--outline {
+  background: transparent;
+  color: var(--rn-primary);
+  border-color: var(--rn-primary);
+}
+
+.button--outline:hover {
+  background: var(--rn-primary);
+  color: white;
+}
+
+/* Clean Sidebar */
+.theme-doc-sidebar-container {
+  background: var(--rn-gray-50);
+  border-right: 1px solid #F3F4F6;
+}
+
+.theme-doc-sidebar-item-link {
+  border-radius: 4px;
+  margin: 1px 0;
+  transition: all 0.2s ease;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.theme-doc-sidebar-item-link:hover {
+  background: #F3F4F6;
+  color: var(--rn-primary);
+}
+
+.theme-doc-sidebar-item-link--active {
+  background: var(--rn-primary);
+  color: white;
+  font-weight: 500;
+}
+
+/* Minimal Code Blocks */
+.prism-code {
+  border-radius: 6px;
+  border: 1px solid #E5E7EB;
+  box-shadow: none;
+  background: #F9FAFB !important;
+}
+
+[data-theme='dark'] .prism-code {
+  background: #1F2937 !important;
+  border-color: #374151;
+}
+
+/* Clean Table of Contents */
+.table-of-contents {
+  border-left: 2px solid var(--rn-primary);
+  padding-left: 1rem;
+}
+
+.table-of-contents__link {
+  font-size: 0.85rem;
+  color: #6B7280;
+  transition: color 0.2s ease;
+}
+
+.table-of-contents__link:hover {
+  color: var(--rn-primary);
+}
+
+.table-of-contents__link--active {
+  color: var(--rn-primary);
+  font-weight: 600;
+}
+
+/* Minimal Footer */
+.footer {
+  background: var(--rn-gray-50);
+  border-top: 1px solid #F3F4F6;
+  color: #6B7280;
+}
+
+[data-theme='dark'] .footer {
+  background: #1F2937;
+  border-top: 1px solid #374151;
+}
+
+/* Ultra Clean Typography */
+h1, h2, h3, h4, h5, h6 {
+  color: #111827;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+p {
+  color: #6B7280;
+  line-height: 1.7;
+}
+
+/* Mobile-First Responsive */
+@media (max-width: 768px) {
+  .hero {
+    padding: 3rem 0;
+  }
+  
+  .hero h1 {
+    font-size: 2.25rem;
+  }
+  
+  .features {
+    padding: 3rem 0;
+  }
+  
+  .feature {
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Ultra Minimal Shadows */
+.card, .feature {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.card:hover, .feature:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Clean Links */
+a {
+  color: var(--rn-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--rn-primary-dark);
+  text-decoration: none;
 }
