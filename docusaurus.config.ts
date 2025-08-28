@@ -212,29 +212,62 @@ const config: Config = {
       copyright: `Copyright © ${new Date().getFullYear()} Saros Finance. Documentation built with Docusaurus.`,
     },
     // Algolia DocSearch configuration
-    // Note: Replace these placeholder values with real Algolia credentials
+    // Environment variables override placeholder values for production
     // Apply for DocSearch at: https://docsearch.algolia.com/apply/
     algolia: {
-      // The application ID provided by Algolia
-      appId: 'YOUR_APP_ID',
+      // Application ID provided by Algolia
+      appId: process.env.ALGOLIA_APP_ID || 'SAROS_DOCS_APP_ID',
       
-      // Public API key: it is safe to commit it  
-      apiKey: 'YOUR_SEARCH_API_KEY',
+      // Public API key: it is safe to commit it
+      apiKey: process.env.ALGOLIA_SEARCH_API_KEY || '1234567890abcdef1234567890abcdef',
       
-      // The index name
-      indexName: 'saros-sdk-docs',
+      // Index name for Saros SDK documentation
+      indexName: process.env.ALGOLIA_INDEX_NAME || 'saros-sdk-docs',
       
-      // Optional: see doc section below
+      // Contextual search for better results
       contextualSearch: true,
       
-      // Optional: Specify domains where the navigation should occur through window.location instead on history.push
-      externalUrlRegex: 'external\\.com|domain\\.com',
+      // Replace with your actual domain in production
+      externalUrlRegex: `saros-docs\\.rectorspace\\.com|docs\\.saros\\.xyz`,
       
-      // Optional: Algolia search parameters
-      searchParameters: {},
+      // Search parameters for better relevance
+      searchParameters: {
+        facetFilters: ['type:content'],
+        hitsPerPage: 20,
+        attributesToRetrieve: [
+          'hierarchy.lvl0',
+          'hierarchy.lvl1', 
+          'hierarchy.lvl2',
+          'hierarchy.lvl3',
+          'content',
+          'type',
+          'url'
+        ],
+        attributesToHighlight: [
+          'hierarchy.lvl0',
+          'hierarchy.lvl1',
+          'hierarchy.lvl2', 
+          'hierarchy.lvl3',
+          'content'
+        ],
+        attributesToSnippet: ['content:20'],
+        highlightPreTag: '<mark>',
+        highlightPostTag: '</mark>',
+        minWordSizefor1Typo: 3,
+        minWordSizefor2Typos: 7,
+        allowTyposOnNumericTokens: false,
+        minProximity: 1,
+        ignorePlurals: true,
+        advancedSyntax: true,
+        analytics: true,
+        enableRules: true
+      },
       
-      // Optional: path for search page that enabled by default (`false` to disable it)  
+      // Search page configuration
       searchPagePath: 'search',
+      
+      // Placeholder configuration notice
+      placeholder: process.env.ALGOLIA_APP_ID ? 'Search documentation...' : 'Search (Configure Algolia)'
     },
     prism: {
       theme: prismThemes.github,

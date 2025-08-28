@@ -670,7 +670,7 @@ if (!position) {
 }
 ```
 
-## 🏊‍♂️ DLMM-Specific Issues
+## DLMM-Specific Issues
 
 ### Bin and Range Management
 
