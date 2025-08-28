@@ -112,7 +112,7 @@ xcode-select --install
 # Install Visual Studio Build Tools
 ```
 
-## 🌐 Network Issues
+## 🌐 Network Issues {#network-issues}
 
 ### RPC Connection Problems
 
@@ -323,7 +323,7 @@ const quote = await sdk.getQuote({
 });
 ```
 
-## 🔐 Wallet Issues
+## 🔐 Wallet Issues {#wallet-issues}
 
 ### Wallet Connection Problems
 
@@ -419,7 +419,7 @@ function loadKeypairSafely(keypairPath: string): Keypair {
 
 ## 🔄 API Errors
 
-### Pool and Token Issues
+### Pool and Token Issues {#api-errors}
 
 #### Error: `Pool does not exist`
 
@@ -545,7 +545,7 @@ const poolInfo = await rateLimitedSDK.makeRequest(() =>
 );
 ```
 
-## 💸 Trading Issues
+## 💸 Trading Issues {#trading-issues}
 
 ### Swap Execution Problems
 
@@ -670,7 +670,7 @@ if (!position) {
 }
 ```
 
-## DLMM-Specific Issues
+## DLMM-Specific Issues {#transaction-errors}
 
 ### Bin and Range Management
 

@@ -118,6 +118,11 @@ const config: Config = {
           label: 'Tools',
         },
         {
+          to: '/docs/interactive-examples',
+          label: '🎮 Try Interactive',
+          position: 'left',
+        },
+        {
           href: 'https://github.com/saros-xyz/saros-sdk',
           label: 'GitHub',
           position: 'right',
