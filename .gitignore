@@ -8,13 +8,21 @@
 .docusaurus
 .cache-loader
 
-# Misc
-.DS_Store
+# Test artifacts
+coverage/
+test-results/
+
+# Environment
+.env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 
+# Misc
+.DS_Store
+
+# Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
