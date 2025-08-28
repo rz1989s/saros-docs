@@ -724,3 +724,124 @@
   background: linear-gradient(135deg, #1F2937 0%, #111827 100%);
   border-top: 1px solid rgba(167, 139, 250, 0.2);
 }
+
+/* ✨ DYTE INTERACTIVE CONFERENCE PLATFORM ENHANCEMENTS ✨ */
+
+/* Enhanced glassmorphism for all interactive elements */
+.dyte-navbar-wrapper,
+.dyte-floating-nav,
+.dyte-help-widget {
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+}
+
+/* Smooth interactions for all elements */
+.dyte-main-content {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Enhanced hover effects for collaboration */
+.dyte-main-content a:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+  transition: all 0.2s ease;
+}
+
+/* Live cursor simulation */
+@keyframes cursor-move {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(20px, -10px); }
+  50% { transform: translate(40px, 15px); }
+  75% { transform: translate(10px, 25px); }
+}
+
+#collaboration-cursors::after {
+  content: '👆';
+  position: fixed;
+  top: 200px;
+  left: 300px;
+  font-size: 20px;
+  z-index: 9999;
+  animation: cursor-move 8s ease-in-out infinite;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Floating elements base styling */
+.dyte-online-counter,
+.dyte-help-widget,
+.dyte-floating-nav {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Enhanced split-screen mode */
+.dyte-main-content {
+  min-height: calc(100vh - 120px);
+}
+
+/* Interactive elements glow effects */
+.dyte-main-content button:hover,
+.dyte-main-content .card:hover,
+.dyte-main-content .api-explorer:hover {
+  box-shadow: 0 0 30px rgba(124, 58, 237, 0.3);
+}
+
+/* Live preview panel styling */
+.dyte-live-preview {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(124, 58, 237, 0.3) transparent;
+}
+
+.dyte-live-preview::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dyte-live-preview::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.dyte-live-preview::-webkit-scrollbar-thumb {
+  background: rgba(124, 58, 237, 0.3);
+  border-radius: 4px;
+}
+
+/* Enhanced responsive design for conference features */
+@media (max-width: 768px) {
+  .dyte-floating-nav {
+    display: none !important;
+  }
+  
+  .dyte-main-content {
+    margin-right: 0 !important;
+  }
+  
+  .dyte-help-widget {
+    bottom: 120px !important;
+    right: 20px !important;
+    width: 50px !important;
+    height: 50px !important;
+  }
+  
+  .dyte-online-counter {
+    top: 70px !important;
+    right: 10px !important;
+    font-size: 11px !important;
+    padding: 6px 10px !important;
+  }
+}
+
+/* Collaboration cursors for different screen sizes */
+@media (max-width: 1024px) {
+  #collaboration-cursors::after {
+    display: none;
+  }
+}
+
+/* Enhanced focus states for accessibility */
+.dyte-floating-nav button:focus,
+.dyte-help-widget:focus,
+button[style*="background: linear-gradient"]:focus {
+  outline: 2px solid rgba(124, 58, 237, 0.8);
+  outline-offset: 2px;
+}
