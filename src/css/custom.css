@@ -7,62 +7,79 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
-/* Saros Finance Brand Colors */
+/* Dyte-Inspired Brand Colors */
 :root {
-  /* Primary Saros Colors */
-  --saros-primary: #667eea;
-  --saros-primary-dark: #5a67d8;
-  --saros-primary-darker: #4c51bf;
-  --saros-primary-darkest: #434190;
-  --saros-primary-light: #7c3aed;
-  --saros-primary-lighter: #8b5cf6;
-  --saros-primary-lightest: #a78bfa;
+  /* Primary Purple Colors */
+  --dyte-primary: #7C3AED;
+  --dyte-primary-dark: #6D28D9;
+  --dyte-primary-darker: #5B21B6;
+  --dyte-primary-darkest: #4C1D95;
+  --dyte-primary-light: #8B5CF6;
+  --dyte-primary-lighter: #A78BFA;
+  --dyte-primary-lightest: #C4B5FD;
   
-  /* Saros Secondary Colors */
-  --saros-secondary: #38b2ac;
-  --saros-accent: #ed8936;
-  --saros-success: #48bb78;
-  --saros-warning: #ed8936;
-  --saros-error: #e53e3e;
+  /* Secondary Colors */
+  --dyte-secondary: #3B82F6;
+  --dyte-accent: #10B981;
+  --dyte-success: #059669;
+  --dyte-warning: #F59E0B;
+  --dyte-error: #DC2626;
   
-  /* Apply Saros colors to Docusaurus */
-  --ifm-color-primary: var(--saros-primary);
-  --ifm-color-primary-dark: var(--saros-primary-dark);
-  --ifm-color-primary-darker: var(--saros-primary-darker);
-  --ifm-color-primary-darkest: var(--saros-primary-darkest);
-  --ifm-color-primary-light: var(--saros-primary-light);
-  --ifm-color-primary-lighter: var(--saros-primary-lighter);
-  --ifm-color-primary-lightest: var(--saros-primary-lightest);
+  /* Gradient Colors */
+  --dyte-gradient: linear-gradient(135deg, #7C3AED 0%, #3B82F6 50%, #10B981 100%);
+  --dyte-gradient-light: linear-gradient(135deg, #EDE9FE 0%, #DBEAFE 50%, #D1FAE5 100%);
+  
+  /* Apply Dyte colors to Docusaurus */
+  --ifm-color-primary: var(--dyte-primary);
+  --ifm-color-primary-dark: var(--dyte-primary-dark);
+  --ifm-color-primary-darker: var(--dyte-primary-darker);
+  --ifm-color-primary-darkest: var(--dyte-primary-darkest);
+  --ifm-color-primary-light: var(--dyte-primary-light);
+  --ifm-color-primary-lighter: var(--dyte-primary-lighter);
+  --ifm-color-primary-lightest: var(--dyte-primary-lightest);
   
   /* Typography */
   --ifm-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --ifm-font-family-monospace: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(102, 126, 234, 0.1);
+  --docusaurus-highlighted-code-line-bg: rgba(124, 58, 237, 0.15);
   
   /* Spacing and Layout */
   --ifm-spacing-horizontal: 1.5rem;
-  --ifm-navbar-height: 4rem;
+  --ifm-navbar-height: 4.5rem;
+  
+  /* Enhanced Background */
+  --ifm-background-color: #FAFAFA;
+  --ifm-background-surface-color: #FFFFFF;
+  --ifm-color-emphasis-100: #F3F4F6;
+  --ifm-color-emphasis-200: #E5E7EB;
+  --ifm-color-emphasis-300: #D1D5DB;
 }
 
 /* Dark mode adjustments */
 [data-theme='dark'] {
-  --saros-primary: #a78bfa;
-  --saros-primary-dark: #8b5cf6;
-  --saros-primary-darker: #7c3aed;
-  --saros-primary-darkest: #6d28d9;
-  --saros-primary-light: #c4b5fd;
-  --saros-primary-lighter: #ddd6fe;
-  --saros-primary-lightest: #ede9fe;
+  --dyte-primary: #A78BFA;
+  --dyte-primary-dark: #8B5CF6;
+  --dyte-primary-darker: #7C3AED;
+  --dyte-primary-darkest: #6D28D9;
+  --dyte-primary-light: #C4B5FD;
+  --dyte-primary-lighter: #DDD6FE;
+  --dyte-primary-lightest: #EDE9FE;
   
-  --ifm-color-primary: var(--saros-primary);
-  --ifm-color-primary-dark: var(--saros-primary-dark);
-  --ifm-color-primary-darker: var(--saros-primary-darker);
-  --ifm-color-primary-darkest: var(--saros-primary-darkest);
-  --ifm-color-primary-light: var(--saros-primary-light);
-  --ifm-color-primary-lighter: var(--saros-primary-lighter);
-  --ifm-color-primary-lightest: var(--saros-primary-lightest);
+  --dyte-gradient: linear-gradient(135deg, #A78BFA 0%, #60A5FA 50%, #34D399 100%);
+  --dyte-gradient-light: linear-gradient(135deg, #1F2937 0%, #374151 50%, #065F46 100%);
+  
+  --ifm-color-primary: var(--dyte-primary);
+  --ifm-color-primary-dark: var(--dyte-primary-dark);
+  --ifm-color-primary-darker: var(--dyte-primary-darker);
+  --ifm-color-primary-darkest: var(--dyte-primary-darkest);
+  --ifm-color-primary-light: var(--dyte-primary-light);
+  --ifm-color-primary-lighter: var(--dyte-primary-lighter);
+  --ifm-color-primary-lightest: var(--dyte-primary-lightest);
   --docusaurus-highlighted-code-line-bg: rgba(167, 139, 250, 0.2);
+  
+  --ifm-background-color: #111827;
+  --ifm-background-surface-color: #1F2937;
 }
 
 /* API Explorer Styles */
@@ -557,4 +574,153 @@
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+/* Dyte-Inspired Enhancements */
+
+/* Hero Section with Gradient */
+.hero {
+  background: var(--dyte-gradient);
+  background-size: 200% 200%;
+  animation: gradient 6s ease infinite;
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Card Enhancements */
+.card {
+  background: var(--ifm-background-surface-color);
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(124, 58, 237, 0.1);
+  border: 1px solid rgba(124, 58, 237, 0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(124, 58, 237, 0.15);
+}
+
+/* Homepage Features */
+.features {
+  padding: 4rem 0;
+  background: var(--dyte-gradient-light);
+}
+
+.feature {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(124, 58, 237, 0.08);
+  border: 1px solid rgba(124, 58, 237, 0.1);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.feature:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(124, 58, 237, 0.15);
+}
+
+/* Enhanced Navbar */
+.navbar {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(124, 58, 237, 0.1);
+  box-shadow: 0 2px 20px rgba(124, 58, 237, 0.05);
+}
+
+[data-theme='dark'] .navbar {
+  background: rgba(17, 24, 39, 0.95);
+  border-bottom: 1px solid rgba(167, 139, 250, 0.2);
+}
+
+/* Enhanced Buttons */
+.button {
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.button--primary {
+  background: var(--dyte-gradient);
+  color: white;
+  box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
+}
+
+.button--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(124, 58, 237, 0.4);
+  color: white;
+}
+
+/* Sidebar Enhancements */
+.theme-doc-sidebar-container {
+  border-right: 1px solid rgba(124, 58, 237, 0.1);
+}
+
+.theme-doc-sidebar-item-link {
+  border-radius: 8px;
+  margin: 2px 0;
+  transition: all 0.2s ease;
+}
+
+.theme-doc-sidebar-item-link:hover {
+  background: rgba(124, 58, 237, 0.08);
+}
+
+.theme-doc-sidebar-item-link--active {
+  background: var(--dyte-gradient);
+  color: white;
+}
+
+/* Code Block Enhancements */
+.prism-code {
+  border-radius: 12px;
+  border: 1px solid rgba(124, 58, 237, 0.1);
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.05);
+}
+
+/* Table of Contents */
+.table-of-contents {
+  border-left: 3px solid rgba(124, 58, 237, 0.2);
+  padding-left: 1rem;
+}
+
+.table-of-contents__link--active {
+  color: var(--dyte-primary);
+  font-weight: 600;
+}
+
+/* Footer Enhancements */
+.footer {
+  background: linear-gradient(135deg, #1F2937 0%, #111827 100%);
+  border-top: 1px solid rgba(167, 139, 250, 0.2);
 }
