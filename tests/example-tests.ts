@@ -20,10 +20,10 @@ const TEST_CONFIG = {
   },
   mainnet: {
     rpcUrl: 'https://api.mainnet-beta.solana.com',
-    // Note: For mainnet tests, use a funded wallet with minimal amounts
+    testWallet: undefined, // No wallet for mainnet read-only tests
     testAmount: 0.01 * 1e6, // 0.01 USDC for mainnet tests
   }
-};
+} as const;
 
 // Test utilities
 class TestUtilities {
@@ -32,7 +32,7 @@ class TestUtilities {
     const connection = new Connection(config.rpcUrl, 'confirmed');
     
     // For devnet, fund the test wallet
-    if (network === 'devnet') {
+    if (network === 'devnet' && config.testWallet) {
       try {
         const airdropSignature = await connection.requestAirdrop(
           config.testWallet.publicKey,

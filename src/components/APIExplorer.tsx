@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { PublicKey } from '@solana/web3.js';
 
 // Mock SDK types for documentation purposes
 type SarosSDK = {
@@ -203,19 +204,21 @@ export const APIExplorer: React.FC = () => {
     try {
       // Mock SDK instances for documentation purposes
       const sdk = {
-        getPoolInfo: async () => ({ poolId: 'mock-pool', tokenA: 'USDC', tokenB: 'SOL' }),
+        getPoolInfo: async (poolId?: string) => ({ poolId: poolId || 'mock-pool', tokenA: 'USDC', tokenB: 'SOL' }),
         getAllPools: async () => [{ id: 'pool1' }, { id: 'pool2' }],
-        getQuote: async () => ({ inAmount: 1000000, outAmount: 950000 }),
-        executeSwap: async () => ({ success: true, signature: 'mock-signature' }),
+        getQuote: async (params?: any) => ({ inAmount: params?.amount || 1000000, outAmount: 950000 }),
+        executeSwap: async (params?: any) => ({ success: true, signature: 'mock-signature' }),
         getStakingPools: async () => [{ poolId: 'stake1', apy: 12.5 }],
-        stake: async () => ({ success: true, amount: 1000000 }),
+        stake: async (params?: any) => ({ success: true, amount: params?.amount || 1000000 }),
+        getUserPositions: async (userAddress?: any) => [{ positionId: 'pos1', amount: 1000 }],
       };
       
       const dlmmSDK = {
-        createPosition: async () => ({ positionId: 'mock-position' }),
-        addLiquidity: async () => ({ success: true }),
-        removeLiquidity: async () => ({ success: true }),
-        getBinPrices: async () => ({ activeBin: 8388608, prices: [] }),
+        createPosition: async (params?: any) => ({ positionId: 'mock-position' }),
+        addLiquidity: async (params?: any) => ({ success: true }),
+        removeLiquidity: async (params?: any) => ({ success: true }),
+        getBinPrices: async (poolId?: string) => ({ activeBin: 8388608, prices: [] }),
+        createAddLiquidityInstructions: async (params?: any) => ({ instructions: [], positionId: 'mock-position' }),
       };
 
       // Validate required parameters

@@ -26,7 +26,7 @@ module.exports = {
   setupFilesAfterEnv: ['<rootDir>/tests/setup.ts'],
   
   // Module path mapping
-  moduleNameMapping: {
+  moduleNameMapper: {
     '^@site/(.*)$': '<rootDir>/src/$1',
     '^@generated/(.*)$': '<rootDir>/.docusaurus/$1',
     '^@saros-finance/(.*)$': '<rootDir>/__mocks__/@saros-finance/$1',
@@ -57,12 +57,6 @@ module.exports = {
   coverageDirectory: 'coverage',
   coverageReporters: ['text', 'lcov', 'html'],
   
-  // Global variables for tests
-  globals: {
-    'ts-jest': {
-      tsconfig: 'tsconfig.json'
-    }
-  },
   
   // Ignore patterns
   testPathIgnorePatterns: [
