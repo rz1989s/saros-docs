@@ -10,6 +10,12 @@ Saros Finance is a DeFi Super-Network that provides:
 - **Staking**: Earn rewards by staking tokens
 - **Farming**: Liquidity provider rewards and yield farming
 
+## SDK Architecture
+
+![Saros SDK Architecture](/img/saros-sdk-architecture.svg)
+
+The Saros ecosystem provides three specialized SDKs, each optimized for different development needs and performance requirements. From web-friendly TypeScript integration to high-performance Rust implementations, choose the SDK that best fits your use case.
+
 ## Available SDKs
 
 ### TypeScript SDK (`@saros-finance/sdk`)
@@ -82,6 +88,12 @@ const swapEstimate = await getSwapAmountSaros(
 // Execute swap
 const result = await swapSaros(/* ... parameters ... */);
 ```
+
+## Developer Integration Journey
+
+![Integration Workflow](/img/integration-workflow.svg)
+
+Our documentation is designed to take you from zero to production-ready integration in just a few hours. Whether you're building a simple swap interface or a sophisticated trading bot, we've got you covered.
 
 ## What You'll Learn
 

@@ -1,0 +1,203 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" style="background: #f8f9fa; border-radius: 8px;">
+  <defs>
+    <linearGradient id="workflowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1"/>
+      <stop offset="100%" style="stop-color:#8b5cf6"/>
+    </linearGradient>
+    <marker id="workflowArrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#374151"/>
+    </marker>
+  </defs>
+  
+  <!-- Title -->
+  <text x="450" y="30" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 20px; font-weight: bold; fill: #374151;">
+    Developer Integration Workflow
+  </text>
+  
+  <!-- Phase 1: Setup -->
+  <g>
+    <rect x="50" y="70" width="180" height="120" rx="8" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+    <rect x="60" y="80" width="160" height="30" rx="5" fill="url(#workflowGradient)"/>
+    <text x="140" y="100" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; fill: white;">
+      Phase 1: Setup
+    </text>
+    
+    <text x="70" y="130" style="font-family: Arial, sans-serif; font-size: 11px; fill: #374151;">✅ Install SDK packages</text>
+    <text x="70" y="145" style="font-family: Arial, sans-serif; font-size: 11px; fill: #374151;">✅ Configure RPC endpoint</text>
+    <text x="70" y="160" style="font-family: Arial, sans-serif; font-size: 11px; fill: #374151;">✅ Setup wallet connection</text>
+    <text x="70" y="175" style="font-family: Arial, sans-serif; font-size: 11px; fill: #374151;">⏱️ Time: ~10 minutes</text>
+  </g>
+  
+  <!-- Phase 2: Development -->
+  <g>
+    <rect x="280" y="70" width="180" height="120" rx="8" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+    <rect x="290" y="80" width="160" height="30" rx="5" fill="url(#workflowGradient)"/>
+    <text x="370" y="100" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; fill: white;">
+      Phase 2: Development
+    </text>
+    
+    <text x="300" y="130" style="font-family: Arial, sans-serif; font-size: 11px; fill: #374151;">🔨 Build core features</text>
+    <text x="300" y="145" style="font-family: Arial, sans-serif; font-size: 11px; fill: #374151;">🧪 Test on devnet</text>
+    <text x="300" y="160" style="font-family: Arial, sans-serif; font-size: 11px; fill: #374151;">🐛 Debug & optimize</text>
+    <text x="300" y="175" style="font-family: Arial, sans-serif; font-size: 11px; fill: #374151;">⏱️ Time: 2-5 hours</text>
+  </g>
+  
+  <!-- Phase 3: Production -->
+  <g>
+    <rect x="510" y="70" width="180" height="120" rx="8" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+    <rect x="520" y="80" width="160" height="30" rx="5" fill="url(#workflowGradient)"/>
+    <text x="600" y="100" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; fill: white;">
+      Phase 3: Production
+    </text>
+    
+    <text x="530" y="130" style="font-family: Arial, sans-serif; font-size: 11px; fill: #374151;">🚀 Deploy to mainnet</text>
+    <text x="530" y="145" style="font-family: Arial, sans-serif; font-size: 11px; fill: #374151;">📊 Monitor performance</text>
+    <text x="530" y="160" style="font-family: Arial, sans-serif; font-size: 11px; fill: #374151;">🔄 Continuous improvement</text>
+    <text x="530" y="175" style="font-family: Arial, sans-serif; font-size: 11px; fill: #374151;">⏱️ Time: Ongoing</text>
+  </g>
+  
+  <!-- Flow Arrows -->
+  <line x1="230" y1="130" x2="280" y2="130" stroke="#374151" stroke-width="2" marker-end="url(#workflowArrow)"/>
+  <line x1="460" y1="130" x2="510" y2="130" stroke="#374151" stroke-width="2" marker-end="url(#workflowArrow)"/>
+  
+  <!-- Decision Points -->
+  <g>
+    <rect x="720" y="70" width="150" height="120" rx="8" fill="#fef2f2" stroke="#fca5a5" stroke-width="2"/>
+    <text x="795" y="90" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: bold; fill: #dc2626;">
+      Need Help?
+    </text>
+    
+    <text x="730" y="115" style="font-family: Arial, sans-serif; font-size: 10px; fill: #7f1d1d;">📚 Check documentation</text>
+    <text x="730" y="130" style="font-family: Arial, sans-serif; font-size: 10px; fill: #7f1d1d;">🔍 Browse examples</text>
+    <text x="730" y="145" style="font-family: Arial, sans-serif; font-size: 10px; fill: #7f1d1d;">🐛 Use troubleshooting</text>
+    <text x="730" y="160" style="font-family: Arial, sans-serif; font-size: 10px; fill: #7f1d1d;">💬 Ask on Telegram</text>
+    <text x="730" y="175" style="font-family: Arial, sans-serif; font-size: 10px; fill: #7f1d1d;">🎮 Try API Explorer</text>
+  </g>
+  
+  <!-- SDK Selection Matrix -->
+  <rect x="50" y="230" width="800" height="200" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="450" y="255" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; fill: #374151;">
+    🎯 SDK Selection Guide
+  </text>
+  
+  <!-- TypeScript SDK Box -->
+  <rect x="80" y="280" width="200" height="120" rx="5" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="180" y="300" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: bold; fill: #1d4ed8;">
+    TypeScript SDK
+  </text>
+  <text x="90" y="320" style="font-family: Arial, sans-serif; font-size: 10px; fill: #1e40af;">🎯 Best For:</text>
+  <text x="90" y="335" style="font-family: Arial, sans-serif; font-size: 9px; fill: #3730a3;">• Web applications</text>
+  <text x="90" y="348" style="font-family: Arial, sans-serif; font-size: 9px; fill: #3730a3;">• Node.js backends</text>
+  <text x="90" y="361" style="font-family: Arial, sans-serif; font-size: 9px; fill: #3730a3;">• DeFi frontends</text>
+  <text x="90" y="374" style="font-family: Arial, sans-serif; font-size: 9px; fill: #3730a3;">• Quick prototyping</text>
+  <text x="90" y="387" style="font-family: Arial, sans-serif; font-size: 9px; fill: #3730a3;">⚡ Easy integration</text>
+  
+  <!-- DLMM SDK Box -->
+  <rect x="320" y="280" width="200" height="120" rx="5" fill="#ecfdf5" stroke="#10b981"/>
+  <text x="420" y="300" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: bold; fill: #065f46;">
+    DLMM SDK
+  </text>
+  <text x="330" y="320" style="font-family: Arial, sans-serif; font-size: 10px; fill: #047857;">🎯 Best For:</text>
+  <text x="330" y="335" style="font-family: Arial, sans-serif; font-size: 9px; fill: #064e3b;">• Concentrated liquidity</text>
+  <text x="330" y="348" style="font-family: Arial, sans-serif; font-size: 9px; fill: #064e3b;">• Range strategies</text>
+  <text x="330" y="361" style="font-family: Arial, sans-serif; font-size: 9px; fill: #064e3b;">• Professional LPs</text>
+  <text x="330" y="374" style="font-family: Arial, sans-serif; font-size: 9px; fill: #064e3b;">• Advanced analytics</text>
+  <text x="330" y="387" style="font-family: Arial, sans-serif; font-size: 9px; fill: #064e3b;">⚡ Capital efficient</text>
+  
+  <!-- Rust SDK Box -->
+  <rect x="560" y="280" width="200" height="120" rx="5" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="660" y="300" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: bold; fill: #92400e;">
+    Rust SDK
+  </text>
+  <text x="570" y="320" style="font-family: Arial, sans-serif; font-size: 10px; fill: #b45309;">🎯 Best For:</text>
+  <text x="570" y="335" style="font-family: Arial, sans-serif; font-size: 9px; fill: #a16207;">• High-frequency trading</text>
+  <text x="570" y="348" style="font-family: Arial, sans-serif; font-size: 9px; fill: #a16207;">• MEV bots</text>
+  <text x="570" y="361" style="font-family: Arial, sans-serif; font-size: 9px; fill: #a16207;">• On-chain programs</text>
+  <text x="570" y="374" style="font-family: Arial, sans-serif; font-size: 9px; fill: #a16207;">• Maximum performance</text>
+  <text x="570" y="387" style="font-family: Arial, sans-serif; font-size: 9px; fill: #a16207;">⚡ Ultra fast execution</text>
+  
+  <!-- Integration Timeline -->
+  <rect x="50" y="450" width="800" height="100" rx="8" fill="#fafafa" stroke="#e5e5e5" stroke-width="1"/>
+  <text x="450" y="470" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; fill: #374151;">
+    📈 Typical Integration Timeline
+  </text>
+  
+  <circle cx="120" cy="500" r="20" fill="#10b981"/>
+  <text x="120" y="506" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 11px; font-weight: bold; fill: white;">1</text>
+  <text x="120" y="525" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 9px; fill: #374151;">Setup</text>
+  <text x="120" y="535" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 8px; fill: #6b7280;">10 min</text>
+  
+  <line x1="140" y1="500" x2="180" y2="500" stroke="#374151" stroke-width="2" marker-end="url(#workflowArrow)"/>
+  
+  <circle cx="220" cy="500" r="20" fill="#f59e0b"/>
+  <text x="220" y="506" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 11px; font-weight: bold; fill: white;">2</text>
+  <text x="220" y="525" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 9px; fill: #374151;">First Swap</text>
+  <text x="220" y="535" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 8px; fill: #6b7280;">30 min</text>
+  
+  <line x1="240" y1="500" x2="280" y2="500" stroke="#374151" stroke-width="2" marker-end="url(#workflowArrow)"/>
+  
+  <circle cx="320" cy="500" r="20" fill="#8b5cf6"/>
+  <text x="320" y="506" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 11px; font-weight: bold; fill: white;">3</text>
+  <text x="320" y="525" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 9px; fill: #374151;">Add Features</text>
+  <text x="320" y="535" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 8px; fill: #6b7280;">2-4 hrs</text>
+  
+  <line x1="340" y1="500" x2="380" y2="500" stroke="#374151" stroke-width="2" marker-end="url(#workflowArrow)"/>
+  
+  <circle cx="420" cy="500" r="20" fill="#6366f1"/>
+  <text x="420" y="506" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 11px; font-weight: bold; fill: white;">4</text>
+  <text x="420" y="525" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 9px; fill: #374151;">Test Devnet</text>
+  <text x="420" y="535" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 8px; fill: #6b7280;">1 hr</text>
+  
+  <line x1="440" y1="500" x2="480" y2="500" stroke="#374151" stroke-width="2" marker-end="url(#workflowArrow)"/>
+  
+  <circle cx="520" cy="500" r="20" fill="#ef4444"/>
+  <text x="520" y="506" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 11px; font-weight: bold; fill: white;">5</text>
+  <text x="520" y="525" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 9px; fill: #374151;">Production</text>
+  <text x="520" y="535" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 8px; fill: #6b7280;">Deploy</text>
+  
+  <!-- Support Resources -->
+  <rect x="600" y="450" width="250" height="120" rx="8" fill="#f0f9ff" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="725" y="470" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: bold; fill: #0c4a6e;">
+    🛟 Support Resources
+  </text>
+  
+  <text x="610" y="490" style="font-family: Arial, sans-serif; font-size: 10px; fill: #0c4a6e;">📖 Quick Start Guide (5 min read)</text>
+  <text x="610" y="505" style="font-family: Arial, sans-serif; font-size: 10px; fill: #0c4a6e;">🎯 Interactive API Explorer</text>
+  <text x="610" y="520" style="font-family: Arial, sans-serif; font-size: 10px; fill: #0c4a6e;">💡 15 Working Code Examples</text>
+  <text x="610" y="535" style="font-family: Arial, sans-serif; font-size: 10px; fill: #0c4a6e;">📋 5 Step-by-Step Tutorials</text>
+  <text x="610" y="550" style="font-family: Arial, sans-serif; font-size: 10px; fill: #0c4a6e;">💬 Community Support Channel</text>
+  
+  <!-- Code Snippet Examples -->
+  <rect x="50" y="230" width="800" height="180" rx="8" fill="#1f2937" stroke="#374151"/>
+  <text x="60" y="250" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: bold; fill: #10b981;">Quick Integration Examples</text>
+  
+  <!-- TypeScript Example -->
+  <rect x="70" y="260" width="240" height="120" rx="3" fill="#111827"/>
+  <text x="80" y="275" style="font-family: 'Courier New', monospace; font-size: 9px; fill: #6b7280;">// TypeScript SDK - Basic Swap</text>
+  <text x="80" y="290" style="font-family: 'Courier New', monospace; font-size: 9px; fill: #e5e7eb;">import { swapSaros } from '@saros-finance/sdk';</text>
+  <text x="80" y="305" style="font-family: 'Courier New', monospace; font-size: 9px; fill: #e5e7eb;">const result = await swapSaros(</text>
+  <text x="80" y="320" style="font-family: 'Courier New', monospace; font-size: 9px; fill: #e5e7eb;">  connection, fromAccount,</text>
+  <text x="80" y="335" style="font-family: 'Courier New', monospace; font-size: 9px; fill: #e5e7eb;">  toAccount, amount</text>
+  <text x="80" y="350" style="font-family: 'Courier New', monospace; font-size: 9px; fill: #e5e7eb;">);</text>
+  <text x="80" y="365" style="font-family: 'Courier New', monospace; font-size: 9px; fill: #10b981;">// ✅ Simple & straightforward</text>
+  
+  <!-- DLMM Example -->
+  <rect x="330" y="260" width="240" height="120" rx="3" fill="#111827"/>
+  <text x="340" y="275" style="font-family: 'Courier New', monospace; font-size: 9px; fill: #6b7280;">// DLMM SDK - Range Position</text>
+  <text x="340" y="290" style="font-family: 'Courier New', monospace; font-size: 9px; fill: #e5e7eb;">import { DLMM } from '@saros-finance/dlmm-sdk';</text>
+  <text x="340" y="305" style="font-family: 'Courier New', monospace; font-size: 9px; fill: #e5e7eb;">const position = await dlmm.initializePosition({</text>
+  <text x="340" y="320" style="font-family: 'Courier New', monospace; font-size: 9px; fill: #e5e7eb;">  lowerPrice: 95, upperPrice: 105,</text>
+  <text x="340" y="335" style="font-family: 'Courier New', monospace; font-size: 9px; fill: #e5e7eb;">  liquidityAmount: 1000</text>
+  <text x="340" y="350" style="font-family: 'Courier New', monospace; font-size: 9px; fill: #e5e7eb;">});</text>
+  <text x="340" y="365" style="font-family: 'Courier New', monospace; font-size: 9px; fill: #10b981;">// 📊 Advanced concentrated liquidity</text>
+  
+  <!-- Rust Example -->
+  <rect x="590" y="260" width="240" height="120" rx="3" fill="#111827"/>
+  <text x="600" y="275" style="font-family: 'Courier New', monospace; font-size: 9px; fill: #6b7280;">// Rust SDK - High Performance</text>
+  <text x="600" y="290" style="font-family: 'Courier New', monospace; font-size: 9px; fill: #e5e7eb;">use saros_dlmm_sdk::DlmmPool;</text>
+  <text x="600" y="305" style="font-family: 'Courier New', monospace; font-size: 9px; fill: #e5e7eb;">let pool = DlmmPool::load(&connection, &pool_key)?;</text>
+  <text x="600" y="320" style="font-family: 'Courier New', monospace; font-size: 9px; fill: #e5e7eb;">let quote = pool.get_swap_quote(amount, true)?;</text>
+  <text x="600" y="335" style="font-family: 'Courier New', monospace; font-size: 9px; fill: #e5e7eb;">let tx = pool.swap(&quote, &user_key)?;</text>
+  <text x="600" y="350" style="font-family: 'Courier New', monospace; font-size: 9px; fill: #e5e7eb;">client.send_transaction(&tx).await?;</text>
+  <text x="600" y="365" style="font-family: 'Courier New', monospace; font-size: 9px; fill: #10b981;">// 🚀 Zero-copy, maximum speed</text>
+</svg>
