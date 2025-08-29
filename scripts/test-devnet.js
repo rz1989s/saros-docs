@@ -89,11 +89,12 @@ class DevNetTester {
       {
         name: 'Network Connectivity',
         test: async () => {
-          const health = await this.connection.getHealth();
-          if (health !== 'ok') {
-            throw new Error(`Network health check failed: ${health}`);
+          // Test network connectivity by getting current slot
+          const slot = await this.connection.getSlot();
+          if (typeof slot !== 'number' || slot < 0) {
+            throw new Error(`Network connectivity check failed: invalid slot ${slot}`);
           }
-          return { status: 'healthy', health };
+          return { status: 'healthy', currentSlot: slot };
         }
       },
       {

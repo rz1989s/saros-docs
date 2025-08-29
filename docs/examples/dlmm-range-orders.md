@@ -947,6 +947,6 @@ export class OrderAnalytics {
 
 ### Resources:
 - 📚 [DLMM API Reference](/docs/dlmm-sdk/api-reference) - Complete method docs
-- 🛠️ [Troubleshooting Guide](/docs/troubleshooting#-transaction-errors) - Common problems
+- 🛠️ [Troubleshooting Guide](/docs/troubleshooting#transaction-errors) - Common problems
 - 💬 [Developer Support](https://t.me/+DLLPYFzvTzJmNTJh) - Get help on Telegram
 - 📊 [Pool Analytics](https://docs.saros.xyz/analytics) - Pool statistics and metrics
