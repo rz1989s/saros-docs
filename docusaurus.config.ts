@@ -68,6 +68,11 @@ const config: Config = {
   themeConfig: {
     // Replace with your project's social card
     image: 'img/saros-social-card.jpg',
+    colorMode: {
+      defaultMode: 'dark',
+      disableSwitch: true,
+      respectPrefersColorScheme: false,
+    },
     navbar: {
       hideOnScroll: true,
       logo: {
