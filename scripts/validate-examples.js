@@ -153,8 +153,12 @@ function validateMarkdownStructure(content, filename) {
   for (const link of internalLinks) {
     const urlMatch = link.match(/\(\/docs\/(.*?)\)/);
     if (urlMatch) {
-      const linkedPath = path.join(DOCS_DIR, urlMatch[1] + '.md');
-      const mdxPath = path.join(DOCS_DIR, urlMatch[1] + '.mdx');
+      // Split path and anchor for proper validation
+      const fullPath = urlMatch[1];
+      const pathWithoutAnchor = fullPath.split('#')[0];
+      
+      const linkedPath = path.join(DOCS_DIR, pathWithoutAnchor + '.md');
+      const mdxPath = path.join(DOCS_DIR, pathWithoutAnchor + '.mdx');
       
       if (!fs.existsSync(linkedPath) && !fs.existsSync(mdxPath)) {
         issues.push({
