@@ -16,8 +16,56 @@
   }
 }
 
+/* Mobile Phone Button Layout */
+@media screen and (max-width: 480px) {
+  .heroBanner {
+    padding: 1rem 0.5rem;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+
+  .buttons .button {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 !important;
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .buttons .button--lg {
+    font-size: 0.9rem;
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* Tablet Button Layout */
+@media screen and (min-width: 481px) and (max-width: 996px) {
+  .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0 2rem;
+  }
+
+  .buttons .button {
+    margin: 0 !important;
+  }
+}
+
+/* Desktop Button Layout */
 .buttons {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
 }
