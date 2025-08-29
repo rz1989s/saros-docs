@@ -37,6 +37,12 @@ Traditional AMMs spread liquidity across the entire price curve (0 to ∞). DLMM
 | **Complexity** | Simple | Advanced |
 | **Gas Costs** | Lower | Higher (more complex) |
 
+## Visual Comparison: Liquidity Distribution
+
+![DLMM Bin Distribution](/img/dlmm-bins-visualization.svg)
+
+This visualization shows how DLMM concentrates liquidity in specific price bins around the current market price, compared to traditional AMMs that spread liquidity uniformly. The concentrated approach provides significantly better capital efficiency and higher returns for liquidity providers.
+
 ## Architecture Overview
 
 ### Core Components

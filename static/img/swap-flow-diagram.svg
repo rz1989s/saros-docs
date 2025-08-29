@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" style="background: #f8f9fa; border-radius: 8px;">
+  <defs>
+    <linearGradient id="flowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6366f1"/>
+      <stop offset="100%" style="stop-color:#8b5cf6"/>
+    </linearGradient>
+    <marker id="flowArrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#374151"/>
+    </marker>
+  </defs>
+  
+  <!-- Title -->
+  <text x="450" y="30" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 20px; font-weight: bold; fill: #374151;">
+    Saros Token Swap Process Flow
+  </text>
+  
+  <!-- Step 1 -->
+  <g>
+    <circle cx="100" cy="100" r="35" fill="url(#flowGradient)" stroke="#4338ca" stroke-width="2"/>
+    <text x="100" y="95" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; fill: white;">1</text>
+    <text x="100" y="108" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 11px; fill: white;">Init</text>
+    <rect x="50" y="150" width="100" height="40" rx="5" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="100" y="165" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 10px; fill: #374151;">Setup Connection</text>
+    <text x="100" y="178" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 10px; fill: #374151;">& Wallet</text>
+  </g>
+  
+  <!-- Step 2 -->
+  <g>
+    <circle cx="250" cy="100" r="35" fill="url(#flowGradient)" stroke="#4338ca" stroke-width="2"/>
+    <text x="250" y="95" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; fill: white;">2</text>
+    <text x="250" y="108" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 11px; fill: white;">Quote</text>
+    <rect x="200" y="150" width="100" height="40" rx="5" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="250" y="165" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 10px; fill: #374151;">Get Swap Quote</text>
+    <text x="250" y="178" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 10px; fill: #374151;">& Price Impact</text>
+  </g>
+  
+  <!-- Step 3 -->
+  <g>
+    <circle cx="400" cy="100" r="35" fill="url(#flowGradient)" stroke="#4338ca" stroke-width="2"/>
+    <text x="400" y="95" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; fill: white;">3</text>
+    <text x="400" y="108" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 11px; fill: white;">Valid</text>
+    <rect x="350" y="150" width="100" height="40" rx="5" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="400" y="165" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 10px; fill: #374151;">Validate Params</text>
+    <text x="400" y="178" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 10px; fill: #374151;">& Balances</text>
+  </g>
+  
+  <!-- Step 4 -->
+  <g>
+    <circle cx="550" cy="100" r="35" fill="url(#flowGradient)" stroke="#4338ca" stroke-width="2"/>
+    <text x="550" y="95" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; fill: white;">4</text>
+    <text x="550" y="108" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 11px; fill: white;">Exec</text>
+    <rect x="500" y="150" width="100" height="40" rx="5" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="550" y="165" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 10px; fill: #374151;">Execute Swap</text>
+    <text x="550" y="178" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 10px; fill: #374151;">Transaction</text>
+  </g>
+  
+  <!-- Step 5 -->
+  <g>
+    <circle cx="700" cy="100" r="35" fill="url(#flowGradient)" stroke="#4338ca" stroke-width="2"/>
+    <text x="700" y="95" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; fill: white;">5</text>
+    <text x="700" y="108" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 11px; fill: white;">Conf</text>
+    <rect x="650" y="150" width="100" height="40" rx="5" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="700" y="165" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 10px; fill: #374151;">Confirm & Return</text>
+    <text x="700" y="178" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 10px; fill: #374151;">Transaction Hash</text>
+  </g>
+  
+  <!-- Flow Arrows -->
+  <line x1="135" y1="100" x2="215" y2="100" stroke="#374151" stroke-width="2" marker-end="url(#flowArrow)"/>
+  <line x1="285" y1="100" x2="365" y2="100" stroke="#374151" stroke-width="2" marker-end="url(#flowArrow)"/>
+  <line x1="435" y1="100" x2="515" y2="100" stroke="#374151" stroke-width="2" marker-end="url(#flowArrow)"/>
+  <line x1="585" y1="100" x2="665" y2="100" stroke="#374151" stroke-width="2" marker-end="url(#flowArrow)"/>
+  
+  <!-- Code Examples -->
+  <rect x="50" y="230" width="800" height="120" rx="5" fill="#1f2937" stroke="#374151"/>
+  <text x="60" y="250" style="font-family: 'Courier New', monospace; font-size: 11px; fill: #10b981;">// Example: Complete swap implementation</text>
+  <text x="60" y="265" style="font-family: 'Courier New', monospace; font-size: 11px; fill: #e5e7eb;">const connection = new Connection(RPC_URL);</text>
+  <text x="60" y="280" style="font-family: 'Courier New', monospace; font-size: 11px; fill: #e5e7eb;">const quote = await getSwapAmountSaros(connection, fromMint, toMint, amount, slippage);</text>
+  <text x="60" y="295" style="font-family: 'Courier New', monospace; font-size: 11px; fill: #e5e7eb;">const result = await swapSaros(connection, fromAccount, toAccount, amount, ...);</text>
+  <text x="60" y="310" style="font-family: 'Courier New', monospace; font-size: 11px; fill: #10b981;">// Transaction signature: result.hash</text>
+  <text x="60" y="325" style="font-family: 'Courier New', monospace; font-size: 11px; fill: #6b7280;">// View on explorer: solscan.io/tx/[signature]</text>
+  
+  <!-- Error Handling Box -->
+  <rect x="700" y="230" width="140" height="80" rx="5" fill="#fef2f2" stroke="#fca5a5"/>
+  <text x="770" y="250" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 11px; font-weight: bold; fill: #dc2626;">Error Handling</text>
+  <text x="710" y="265" style="font-family: Arial, sans-serif; font-size: 9px; fill: #7f1d1d;">• Network timeouts</text>
+  <text x="710" y="280" style="font-family: Arial, sans-serif; font-size: 9px; fill: #7f1d1d;">• Insufficient balance</text>
+  <text x="710" y="295" style="font-family: Arial, sans-serif; font-size: 9px; fill: #7f1d1d;">• Slippage exceeded</text>
+  
+  <!-- Performance Stats -->
+  <text x="450" y="370" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 11px; font-weight: bold; fill: #374151;">
+    ⚡ Average Execution Time: 2-4 seconds
+  </text>
+</svg>

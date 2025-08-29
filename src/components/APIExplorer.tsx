@@ -1,21 +1,93 @@
 import React, { useState, useEffect } from 'react';
 import { PublicKey } from '@solana/web3.js';
 
+// Proper TypeScript interfaces for SDK types
+interface PoolInfo {
+  poolId: string;
+  tokenA: string;
+  tokenB: string;
+  liquidity?: number;
+  fee?: number;
+}
+
+interface Pool {
+  id: string;
+  name?: string;
+  tvl?: number;
+}
+
+interface QuoteParams {
+  inputMint: PublicKey | string;
+  outputMint: PublicKey | string;
+  amount: number;
+  slippageBps?: number;
+}
+
+interface QuoteResponse {
+  inAmount: number;
+  outAmount: number;
+  priceImpact?: number;
+  fee?: number;
+}
+
+interface SwapParams extends QuoteParams {
+  userAddress: string;
+}
+
+interface SwapResult {
+  success: boolean;
+  signature?: string;
+  error?: string;
+}
+
+interface StakingPool {
+  poolId: string;
+  apy: number;
+  totalStaked?: number;
+}
+
+interface StakeParams {
+  poolId: string;
+  amount: number;
+  userAddress: string;
+}
+
+interface Position {
+  positionId: string;
+  amount: number;
+  poolId?: string;
+}
+
+interface DLMMParams {
+  poolId: string;
+  binId: number;
+  amountX: number;
+  amountY: number;
+}
+
+interface DLMMResult {
+  positionId?: string;
+  instructions?: unknown[];
+  success?: boolean;
+}
+
 // Mock SDK types for documentation purposes
 type SarosSDK = {
-  getPoolInfo: (poolId: string) => Promise<any>;
-  getAllPools: () => Promise<any>;
-  getQuote: (params: any) => Promise<any>;
-  executeSwap: (params: any) => Promise<any>;
-  getStakingPools: () => Promise<any>;
-  stake: (params: any) => Promise<any>;
+  getPoolInfo: (poolId: string) => Promise<PoolInfo>;
+  getAllPools: () => Promise<Pool[]>;
+  getQuote: (params: QuoteParams) => Promise<QuoteResponse>;
+  executeSwap: (params: SwapParams) => Promise<SwapResult>;
+  getStakingPools: () => Promise<StakingPool[]>;
+  stake: (params: StakeParams) => Promise<SwapResult>;
+  getUserPositions: (userAddress: string) => Promise<Position[]>;
 };
 
 type DLMMSDKv2 = {
-  createPosition: (params: any) => Promise<any>;
-  addLiquidity: (params: any) => Promise<any>;
-  removeLiquidity: (params: any) => Promise<any>;
-  getBinPrices: (poolId: string) => Promise<any>;
+  createPosition: (params: DLMMParams) => Promise<DLMMResult>;
+  addLiquidity: (params: DLMMParams) => Promise<DLMMResult>;
+  removeLiquidity: (params: DLMMParams) => Promise<DLMMResult>;
+  getBinPrices: (poolId: string) => Promise<{ activeBin: number; prices: number[] }>;
+  createAddLiquidityInstructions: (params: DLMMParams) => Promise<DLMMResult>;
 };
 
 interface APIMethod {
@@ -24,7 +96,7 @@ interface APIMethod {
   category: string;
   params: APIParam[];
   returns: string;
-  example: any;
+  example: Record<string, unknown>;
 }
 
 interface APIParam {
@@ -32,7 +104,7 @@ interface APIParam {
   type: string;
   required: boolean;
   description: string;
-  default?: any;
+  default?: string | number | boolean;
 }
 
 const API_METHODS: APIMethod[] = [
@@ -160,8 +232,8 @@ const API_METHODS: APIMethod[] = [
 export const APIExplorer: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('Pools');
   const [selectedMethod, setSelectedMethod] = useState<APIMethod>(API_METHODS[0]);
-  const [parameters, setParameters] = useState<{ [key: string]: any }>({});
-  const [response, setResponse] = useState<any>(null);
+  const [parameters, setParameters] = useState<Record<string, unknown>>({});
+  const [response, setResponse] = useState<unknown>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [rpcUrl, setRpcUrl] = useState('https://api.devnet.solana.com');
@@ -170,7 +242,7 @@ export const APIExplorer: React.FC = () => {
 
   useEffect(() => {
     // Initialize parameters with example values
-    const initialParams: { [key: string]: any } = {};
+    const initialParams: Record<string, unknown> = {};
     selectedMethod.params.forEach(param => {
       if (selectedMethod.example[param.name] !== undefined) {
         initialParams[param.name] = selectedMethod.example[param.name];
@@ -189,7 +261,7 @@ export const APIExplorer: React.FC = () => {
     setSelectedMethod(method);
   };
 
-  const handleParameterChange = (paramName: string, value: any) => {
+  const handleParameterChange = (paramName: string, value: string | number) => {
     setParameters(prev => ({
       ...prev,
       [paramName]: value
@@ -203,22 +275,45 @@ export const APIExplorer: React.FC = () => {
 
     try {
       // Mock SDK instances for documentation purposes
-      const sdk = {
-        getPoolInfo: async (poolId?: string) => ({ poolId: poolId || 'mock-pool', tokenA: 'USDC', tokenB: 'SOL' }),
-        getAllPools: async () => [{ id: 'pool1' }, { id: 'pool2' }],
-        getQuote: async (params?: any) => ({ inAmount: params?.amount || 1000000, outAmount: 950000 }),
-        executeSwap: async (params?: any) => ({ success: true, signature: 'mock-signature' }),
-        getStakingPools: async () => [{ poolId: 'stake1', apy: 12.5 }],
-        stake: async (params?: any) => ({ success: true, amount: params?.amount || 1000000 }),
-        getUserPositions: async (userAddress?: any) => [{ positionId: 'pos1', amount: 1000 }],
+      const sdk: SarosSDK = {
+        getPoolInfo: async (poolId: string) => ({ 
+          poolId: poolId || 'mock-pool', 
+          tokenA: 'USDC', 
+          tokenB: 'SOL',
+          liquidity: 1000000,
+          fee: 0.25
+        }),
+        getAllPools: async () => [
+          { id: 'pool1', name: 'USDC-SOL', tvl: 1500000 }, 
+          { id: 'pool2', name: 'SOL-C98', tvl: 850000 }
+        ],
+        getQuote: async (params: QuoteParams) => ({ 
+          inAmount: params.amount || 1000000, 
+          outAmount: 950000,
+          priceImpact: 0.1,
+          fee: 2500
+        }),
+        executeSwap: async () => ({ success: true, signature: 'mock-signature' }),
+        getStakingPools: async () => [{ poolId: 'stake1', apy: 12.5, totalStaked: 5000000 }],
+        stake: async (params: StakeParams) => ({ 
+          success: true, 
+          signature: 'mock-stake-signature',
+          amount: params.amount,
+          poolId: params.poolId
+        }),
+        getUserPositions: async () => [{ positionId: 'pos1', amount: 1000, poolId: 'pool1' }],
       };
       
-      const dlmmSDK = {
-        createPosition: async (params?: any) => ({ positionId: 'mock-position' }),
-        addLiquidity: async (params?: any) => ({ success: true }),
-        removeLiquidity: async (params?: any) => ({ success: true }),
-        getBinPrices: async (poolId?: string) => ({ activeBin: 8388608, prices: [] }),
-        createAddLiquidityInstructions: async (params?: any) => ({ instructions: [], positionId: 'mock-position' }),
+      const dlmmSDK: DLMMSDKv2 = {
+        createPosition: async () => ({ positionId: 'mock-position', success: true }),
+        addLiquidity: async () => ({ success: true, positionId: 'mock-position' }),
+        removeLiquidity: async () => ({ success: true }),
+        getBinPrices: async () => ({ activeBin: 8388608, prices: [98.5, 99.0, 99.5, 100.0, 100.5, 101.0, 101.5] }),
+        createAddLiquidityInstructions: async () => ({ 
+          instructions: [], 
+          positionId: 'mock-position',
+          success: true 
+        }),
       };
 
       // Validate required parameters
@@ -229,42 +324,45 @@ export const APIExplorer: React.FC = () => {
       }
 
       // Convert string parameters to appropriate types
-      const processedParams = { ...parameters };
+      const processedParams: Record<string, string | number | PublicKey> = {};
       for (const param of selectedMethod.params) {
-        if (param.type === 'PublicKey' && typeof processedParams[param.name] === 'string') {
-          processedParams[param.name] = new PublicKey(processedParams[param.name]);
-        } else if (param.type === 'number' && typeof processedParams[param.name] === 'string') {
-          processedParams[param.name] = parseFloat(processedParams[param.name]);
+        const value = parameters[param.name];
+        if (param.type === 'PublicKey' && typeof value === 'string') {
+          processedParams[param.name] = new PublicKey(value);
+        } else if (param.type === 'number' && typeof value === 'string') {
+          processedParams[param.name] = parseFloat(value);
+        } else {
+          processedParams[param.name] = value as string | number;
         }
       }
 
-      let result: any;
+      let result: unknown;
 
       // Execute the API call based on method name
       switch (selectedMethod.name) {
         case 'getPoolInfo':
-          result = await sdk.getPoolInfo(processedParams.poolId);
+          result = await sdk.getPoolInfo(processedParams.poolId as string);
           break;
         case 'getAllPools':
           result = await sdk.getAllPools();
           break;
         case 'getQuote':
           result = await sdk.getQuote({
-            inputMint: processedParams.inputMint,
-            outputMint: processedParams.outputMint,
-            amount: processedParams.amount,
-            slippageBps: processedParams.slippageBps || 100
+            inputMint: processedParams.inputMint as PublicKey | string,
+            outputMint: processedParams.outputMint as PublicKey | string,
+            amount: processedParams.amount as number,
+            slippageBps: (processedParams.slippageBps as number) || 100
           });
           break;
         case 'getUserPositions':
-          result = await sdk.getUserPositions(processedParams.userAddress);
+          result = await sdk.getUserPositions(processedParams.userAddress as string);
           break;
         case 'createDLMMPosition':
           result = await dlmmSDK.createAddLiquidityInstructions({
-            poolId: processedParams.poolId,
-            binId: processedParams.binId,
-            amountX: processedParams.amountX,
-            amountY: processedParams.amountY
+            poolId: processedParams.poolId as string,
+            binId: processedParams.binId as number,
+            amountX: processedParams.amountX as number,
+            amountY: processedParams.amountY as number
           });
           break;
         default:
@@ -272,15 +370,16 @@ export const APIExplorer: React.FC = () => {
       }
 
       setResponse(result);
-    } catch (err: any) {
-      setError(err.message || 'Unknown error occurred');
+    } catch (err: unknown) {
+      const errorMessage = err instanceof Error ? err.message : 'Unknown error occurred';
+      setError(errorMessage);
     } finally {
       setLoading(false);
     }
   };
 
   const renderParameterInput = (param: APIParam) => {
-    const value = parameters[param.name] || '';
+    const value = (parameters[param.name] as string) || '';
 
     return (
       <div key={param.name} className="parameter-input">

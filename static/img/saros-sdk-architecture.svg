@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" style="background: #f8f9fa; border-radius: 8px;">
+  <defs>
+    <linearGradient id="primaryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1"/>
+      <stop offset="100%" style="stop-color:#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="secondaryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981"/>
+      <stop offset="100%" style="stop-color:#059669"/>
+    </linearGradient>
+    <linearGradient id="rustGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b"/>
+      <stop offset="100%" style="stop-color:#d97706"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 24px; font-weight: bold; fill: #374151;">
+    Saros SDK Architecture
+  </text>
+  
+  <!-- TypeScript SDK -->
+  <g>
+    <rect x="50" y="80" width="200" height="180" rx="10" fill="url(#primaryGradient)" stroke="#4338ca" stroke-width="2"/>
+    <text x="150" y="105" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; fill: white;">
+      TypeScript SDK
+    </text>
+    <text x="60" y="125" style="font-family: Arial, sans-serif; font-size: 12px; fill: white;">
+      @saros-finance/sdk
+    </text>
+    
+    <!-- TS SDK Features -->
+    <rect x="60" y="135" width="180" height="20" rx="3" fill="rgba(255,255,255,0.2)"/>
+    <text x="65" y="148" style="font-family: Arial, sans-serif; font-size: 11px; fill: white;">• AMM Swaps</text>
+    
+    <rect x="60" y="160" width="180" height="20" rx="3" fill="rgba(255,255,255,0.2)"/>
+    <text x="65" y="173" style="font-family: Arial, sans-serif; font-size: 11px; fill: white;">• Liquidity Management</text>
+    
+    <rect x="60" y="185" width="180" height="20" rx="3" fill="rgba(255,255,255,0.2)"/>
+    <text x="65" y="198" style="font-family: Arial, sans-serif; font-size: 11px; fill: white;">• Staking & Farming</text>
+    
+    <rect x="60" y="210" width="180" height="20" rx="3" fill="rgba(255,255,255,0.2)"/>
+    <text x="65" y="223" style="font-family: Arial, sans-serif; font-size: 11px; fill: white;">• Portfolio Analytics</text>
+    
+    <rect x="60" y="235" width="180" height="20" rx="3" fill="rgba(255,255,255,0.2)"/>
+    <text x="65" y="248" style="font-family: Arial, sans-serif; font-size: 11px; fill: white;">• Web3 Integration</text>
+  </g>
+  
+  <!-- DLMM SDK -->
+  <g>
+    <rect x="300" y="80" width="200" height="180" rx="10" fill="url(#secondaryGradient)" stroke="#065f46" stroke-width="2"/>
+    <text x="400" y="105" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; fill: white;">
+      DLMM SDK
+    </text>
+    <text x="310" y="125" style="font-family: Arial, sans-serif; font-size: 12px; fill: white;">
+      @saros-finance/dlmm-sdk
+    </text>
+    
+    <!-- DLMM SDK Features -->
+    <rect x="310" y="135" width="180" height="20" rx="3" fill="rgba(255,255,255,0.2)"/>
+    <text x="315" y="148" style="font-family: Arial, sans-serif; font-size: 11px; fill: white;">• Concentrated Liquidity</text>
+    
+    <rect x="310" y="160" width="180" height="20" rx="3" fill="rgba(255,255,255,0.2)"/>
+    <text x="315" y="173" style="font-family: Arial, sans-serif; font-size: 11px; fill: white;">• Bin Management</text>
+    
+    <rect x="310" y="185" width="180" height="20" rx="3" fill="rgba(255,255,255,0.2)"/>
+    <text x="315" y="198" style="font-family: Arial, sans-serif; font-size: 11px; fill: white;">• Range Orders</text>
+    
+    <rect x="310" y="210" width="180" height="20" rx="3" fill="rgba(255,255,255,0.2)"/>
+    <text x="315" y="223" style="font-family: Arial, sans-serif; font-size: 11px; fill: white;">• Position Analytics</text>
+    
+    <rect x="310" y="235" width="180" height="20" rx="3" fill="rgba(255,255,255,0.2)"/>
+    <text x="315" y="248" style="font-family: Arial, sans-serif; font-size: 11px; fill: white;">• Capital Efficiency</text>
+  </g>
+  
+  <!-- Rust SDK -->
+  <g>
+    <rect x="550" y="80" width="200" height="180" rx="10" fill="url(#rustGradient)" stroke="#b45309" stroke-width="2"/>
+    <text x="650" y="105" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; fill: white;">
+      Rust SDK
+    </text>
+    <text x="560" y="125" style="font-family: Arial, sans-serif; font-size: 12px; fill: white;">
+      saros-dlmm-sdk-rs
+    </text>
+    
+    <!-- Rust SDK Features -->
+    <rect x="560" y="135" width="180" height="20" rx="3" fill="rgba(255,255,255,0.2)"/>
+    <text x="565" y="148" style="font-family: Arial, sans-serif; font-size: 11px; fill: white;">• High-Performance DLMM</text>
+    
+    <rect x="560" y="160" width="180" height="20" rx="3" fill="rgba(255,255,255,0.2)"/>
+    <text x="565" y="173" style="font-family: Arial, sans-serif; font-size: 11px; fill: white;">• MEV Protection</text>
+    
+    <rect x="560" y="185" width="180" height="20" rx="3" fill="rgba(255,255,255,0.2)"/>
+    <text x="565" y="198" style="font-family: Arial, sans-serif; font-size: 11px; fill: white;">• On-Chain Integration</text>
+    
+    <rect x="560" y="210" width="180" height="20" rx="3" fill="rgba(255,255,255,0.2)"/>
+    <text x="565" y="223" style="font-family: Arial, sans-serif; font-size: 11px; fill: white;">• Jupiter Compatible</text>
+    
+    <rect x="560" y="235" width="180" height="20" rx="3" fill="rgba(255,255,255,0.2)"/>
+    <text x="565" y="248" style="font-family: Arial, sans-serif; font-size: 11px; fill: white;">• Zero-Copy Operations</text>
+  </g>
+  
+  <!-- Core Infrastructure -->
+  <rect x="200" y="320" width="400" height="120" rx="10" fill="#374151" stroke="#6b7280" stroke-width="2"/>
+  <text x="400" y="345" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; fill: white;">
+    Saros Protocol Infrastructure
+  </text>
+  
+  <rect x="220" y="360" width="120" height="30" rx="5" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)"/>
+  <text x="280" y="380" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 11px; fill: white;">AMM Pools</text>
+  
+  <rect x="360" y="360" width="120" height="30" rx="5" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)"/>
+  <text x="420" y="380" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 11px; fill: white;">DLMM Pools</text>
+  
+  <rect x="220" y="400" width="120" height="30" rx="5" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)"/>
+  <text x="280" y="420" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 11px; fill: white;">Staking Pools</text>
+  
+  <rect x="360" y="400" width="120" height="30" rx="5" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)"/>
+  <text x="420" y="420" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 11px; fill: white;">Farming Pools</text>
+  
+  <!-- Solana Blockchain -->
+  <rect x="50" y="480" width="700" height="60" rx="10" fill="#9333ea" stroke="#7c3aed" stroke-width="2"/>
+  <text x="400" y="510" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 18px; font-weight: bold; fill: white;">
+    Solana Blockchain Network
+  </text>
+  <text x="400" y="530" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 12px; fill: rgba(255,255,255,0.8);">
+    High Performance • Low Fees • 400ms Block Time
+  </text>
+  
+  <!-- Connection Arrows -->
+  <line x1="150" y1="260" x2="380" y2="320" stroke="#6b7280" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="400" y1="260" x2="400" y2="320" stroke="#6b7280" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="650" y1="260" x2="420" y2="320" stroke="#6b7280" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <line x1="400" y1="440" x2="400" y2="480" stroke="#6b7280" stroke-width="3" marker-end="url(#arrowhead)"/>
+  
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6b7280"/>
+    </marker>
+  </defs>
+  
+  <!-- Developer Labels -->
+  <text x="150" y="55" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 11px; fill: #6b7280;">Web Developers</text>
+  <text x="400" y="55" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 11px; fill: #6b7280;">DeFi Specialists</text>
+  <text x="650" y="55" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 11px; fill: #6b7280;">HFT Engineers</text>
+  
+  <!-- Performance Indicators -->
+  <circle cx="70" cy="290" r="15" fill="#ef4444"/>
+  <text x="70" y="296" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 10px; font-weight: bold; fill: white;">JS</text>
+  <text x="120" y="296" style="font-family: Arial, sans-serif; font-size: 10px; fill: #374151;">Easy Integration</text>
+  
+  <circle cx="320" cy="290" r="15" fill="#f59e0b"/>
+  <text x="320" y="296" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 10px; font-weight: bold; fill: white;">DL</text>
+  <text x="370" y="296" style="font-family: Arial, sans-serif; font-size: 10px; fill: #374151;">Advanced Features</text>
+  
+  <circle cx="570" cy="290" r="15" fill="#10b981"/>
+  <text x="570" y="296" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 9px; font-weight: bold; fill: white;">RS</text>
+  <text x="620" y="296" style="font-family: Arial, sans-serif; font-size: 10px; fill: #374151;">Maximum Speed</text>
+</svg>

@@ -76,6 +76,12 @@ console.log('Wallet address:', wallet.publicKey.toString());
 
 ## 3. Your First Token Swap
 
+### Swap Process Overview
+
+![Token Swap Flow](/img/swap-flow-diagram.svg)
+
+The swap process follows a simple 5-step flow: Initialize connection, get quote, validate parameters, execute transaction, and confirm. Each step includes proper error handling and security checks.
+
 ### Complete Swap Implementation
 
 Create `swap.js` with comprehensive error handling:
