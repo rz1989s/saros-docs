@@ -12,7 +12,7 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: 'TypeScript SDK',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: require('@site/static/img/saros-sdk-architecture.svg').default,
     description: (
       <>
         Complete TypeScript SDK for Saros AMM, staking, and farming. 
@@ -23,7 +23,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'DLMM SDK',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    Svg: require('@site/static/img/dlmm-bins-visualization.svg').default,
     description: (
       <>
         Dynamic Liquidity Market Maker SDK for concentrated liquidity and 
@@ -34,7 +34,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Rust Performance',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/swap-flow-diagram.svg').default,
     description: (
       <>
         High-performance Rust SDK implementing Jupiter's AMM trait for 
