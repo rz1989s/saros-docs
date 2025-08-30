@@ -7,7 +7,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 This is a Docusaurus-based documentation site for Saros Finance SDKs on Solana. The site provides comprehensive documentation for multiple SDKs (TypeScript, DLMM, and Rust) with interactive examples, tutorials, and API references.
 
 **Live Site**: https://saros-docs.rectorspace.com  
-**Repository**: https://github.com/rz1989s/saros-sdk-docs
+**Repository**: https://github.com/rz1989s/saros-docs
 
 ## Common Development Commands
 

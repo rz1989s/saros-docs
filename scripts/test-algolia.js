@@ -17,7 +17,7 @@ const ALGOLIA_CONFIG = {
   appId: process.env.ALGOLIA_APP_ID || 'SAROS_DOCS_APP_ID',
   searchApiKey: process.env.ALGOLIA_SEARCH_API_KEY || '1234567890abcdef1234567890abcdef',
   adminApiKey: process.env.ALGOLIA_ADMIN_API_KEY, // Optional, for advanced operations
-  indexName: process.env.ALGOLIA_INDEX_NAME || 'saros-sdk-docs',
+  indexName: process.env.ALGOLIA_INDEX_NAME || 'saros-docs',
   
   // Test configuration
   testQueries: [

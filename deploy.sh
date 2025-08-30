@@ -165,4 +165,4 @@ esac
 echo ""
 echo "🎉 Deployment script completed!"
 echo "📚 Documentation: https://saros-docs.rectorspace.com"
-echo "🔗 Repository: https://github.com/saros-xyz/saros-sdk-docs"
+echo "🔗 Repository: https://github.com/rz1989s/saros-docs"

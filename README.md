@@ -14,8 +14,8 @@ This documentation site provides comprehensive guides, tutorials, and API refere
 
 ```bash
 # Clone repository
-git clone https://github.com/saros-xyz/saros-sdk-docs.git
-cd saros-sdk-docs
+git clone https://github.com/rz1989s/saros-docs.git
+cd saros-docs
 
 # Install dependencies
 npm install

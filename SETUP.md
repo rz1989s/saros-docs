@@ -11,7 +11,7 @@ The documentation site is configured to use Algolia DocSearch for powerful searc
 1. Visit [Algolia DocSearch Application](https://docsearch.algolia.com/apply/)
 2. Fill out the form with these details:
    - **Website URL**: `https://saros-docs.rectorspace.com`
-   - **GitHub Repository**: `https://github.com/saros-xyz/saros-sdk-docs` (or your repo)
+   - **GitHub Repository**: `https://github.com/rz1989s/saros-docs`
    - **Email**: Your contact email
    - **Documentation Type**: Technical documentation for developers
 
@@ -30,7 +30,7 @@ Update the configuration in `docusaurus.config.ts`:
 algolia: {
   appId: 'YOUR_ACTUAL_APP_ID',           // Replace with provided App ID
   apiKey: 'YOUR_ACTUAL_SEARCH_API_KEY',  // Replace with provided API key
-  indexName: 'saros-sdk-docs',           // Confirm index name with Algolia
+  indexName: 'saros-docs',           // Confirm index name with Algolia
   contextualSearch: true,
   searchPagePath: 'search',
 },

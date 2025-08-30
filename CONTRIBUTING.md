@@ -64,8 +64,8 @@ try {
 
 ```bash
 # Clone and setup
-git clone https://github.com/saros-xyz/saros-sdk-docs.git
-cd saros-sdk-docs
+git clone https://github.com/rz1989s/saros-docs.git
+cd saros-docs
 npm install
 
 # Environment configuration
@@ -287,7 +287,7 @@ npm run format           # Auto-format all files
 
 ### For Contributors
 
-- **Documentation Issues**: [GitHub Issues](https://github.com/saros-xyz/saros-sdk-docs/issues)
+- **Documentation Issues**: [GitHub Issues](https://github.com/rz1989s/saros-docs/issues)
 - **SDK Questions**: [Developer Support](https://t.me/+DLLPYFzvTzJmNTJh)
 - **Technical Help**: Mention maintainers in your PR or issue
 

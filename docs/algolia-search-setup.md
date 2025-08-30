@@ -22,7 +22,7 @@ Algolia DocSearch provides fast, typo-tolerant search for documentation sites. T
 ```
 Website URL: https://saros-docs.rectorspace.com
 Email: your-email@example.com
-Repository: https://github.com/saros-xyz/saros-sdk-docs
+Repository: https://github.com/saros-xyz/saros-docs
 Description: Comprehensive documentation for Saros Finance SDKs on Solana, 
 including TypeScript, DLMM, and Rust SDKs with examples and tutorials.
 ```
@@ -49,7 +49,7 @@ Create environment files for different stages:
 # .env.development
 ALGOLIA_APP_ID=your_dev_app_id
 ALGOLIA_SEARCH_API_KEY=your_dev_search_key
-ALGOLIA_INDEX_NAME=saros-sdk-docs-dev
+ALGOLIA_INDEX_NAME=saros-docs-dev
 ALGOLIA_DEBUG=true
 NODE_ENV=development
 ```
@@ -58,7 +58,7 @@ NODE_ENV=development
 # .env.production  
 ALGOLIA_APP_ID=your_production_app_id
 ALGOLIA_SEARCH_API_KEY=your_production_search_key
-ALGOLIA_INDEX_NAME=saros-sdk-docs
+ALGOLIA_INDEX_NAME=saros-docs
 ALGOLIA_DEBUG=false
 NODE_ENV=production
 ```
@@ -75,7 +75,7 @@ vercel env add ALGOLIA_SEARCH_API_KEY production
 # Enter your Algolia Search API Key when prompted
 
 vercel env add ALGOLIA_INDEX_NAME production
-# Enter: saros-sdk-docs
+# Enter: saros-docs
 ```
 
 #### Netlify Deployment
@@ -83,7 +83,7 @@ vercel env add ALGOLIA_INDEX_NAME production
 # Using Netlify CLI
 netlify env:set ALGOLIA_APP_ID your_production_app_id
 netlify env:set ALGOLIA_SEARCH_API_KEY your_production_search_key
-netlify env:set ALGOLIA_INDEX_NAME saros-sdk-docs
+netlify env:set ALGOLIA_INDEX_NAME saros-docs
 
 # Or configure in Netlify dashboard:
 # Site settings → Environment variables → Add variable
@@ -95,7 +95,7 @@ netlify env:set ALGOLIA_INDEX_NAME saros-sdk-docs
 env:
   ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
   ALGOLIA_SEARCH_API_KEY: ${{ secrets.ALGOLIA_SEARCH_API_KEY }}
-  ALGOLIA_INDEX_NAME: saros-sdk-docs
+  ALGOLIA_INDEX_NAME: saros-docs
 ```
 
 ## Step 3: Received Credentials Setup
@@ -118,7 +118,7 @@ When approved, you'll receive:
    - Used only for crawler configuration
    - Keep secure, never expose publicly
 
-4. **Index Name** (e.g., `saros-sdk-docs`)
+4. **Index Name** (e.g., `saros-docs`)
    - Name of your search index
    - Usually matches your site name
 
@@ -171,7 +171,7 @@ Create `.algolia/config.json` for the crawler:
 
 ```json
 {
-  "index_name": "saros-sdk-docs",
+  "index_name": "saros-docs",
   "start_urls": [
     {
       "url": "https://saros-docs.rectorspace.com/docs/",
@@ -342,7 +342,7 @@ Test Algolia integration locally:
 # Set test credentials
 export ALGOLIA_APP_ID=your_test_app_id
 export ALGOLIA_SEARCH_API_KEY=your_test_search_key
-export ALGOLIA_INDEX_NAME=saros-sdk-docs-test
+export ALGOLIA_INDEX_NAME=saros-docs-test
 export ALGOLIA_DEBUG=true
 
 # Start development server
@@ -359,7 +359,7 @@ Validate production search:
 ```bash
 # Test production search API
 curl -X POST \
-  "https://your_app_id-dsn.algolia.net/1/indexes/saros-sdk-docs/query" \
+  "https://your_app_id-dsn.algolia.net/1/indexes/saros-docs/query" \
   -H "X-Algolia-Application-Id: YOUR_APP_ID" \
   -H "X-Algolia-API-Key: YOUR_SEARCH_API_KEY" \
   -H "Content-Type: application/json" \
@@ -580,7 +580,7 @@ Configure the Algolia crawler:
 
 ```json
 {
-  "index_name": "saros-sdk-docs",
+  "index_name": "saros-docs",
   "start_urls": [
     {
       "url": "https://saros-docs.rectorspace.com/docs/getting-started/",
@@ -707,7 +707,7 @@ Configure the Algolia crawler:
 # Required environment variables
 ALGOLIA_APP_ID=your_production_app_id
 ALGOLIA_SEARCH_API_KEY=your_production_search_key
-ALGOLIA_INDEX_NAME=saros-sdk-docs
+ALGOLIA_INDEX_NAME=saros-docs
 
 # Optional environment variables
 ALGOLIA_DEBUG=false
@@ -720,7 +720,7 @@ After deployment, validate search functionality:
 
 ```bash
 # Test search endpoint
-curl "https://your_app_id-dsn.algolia.net/1/indexes/saros-sdk-docs/query" \
+curl "https://your_app_id-dsn.algolia.net/1/indexes/saros-docs/query" \
   -X POST \
   -H "X-Algolia-Application-Id: your_app_id" \
   -H "X-Algolia-API-Key: your_search_key" \
@@ -801,12 +801,12 @@ If the crawler isn't indexing content:
 
 ```bash
 # Export search index for backup
-curl "https://your_app_id-dsn.algolia.net/1/indexes/saros-sdk-docs/browse" \
+curl "https://your_app_id-dsn.algolia.net/1/indexes/saros-docs/browse" \
   -H "X-Algolia-Application-Id: your_app_id" \
   -H "X-Algolia-API-Key: your_admin_key" > search-index-backup.json
 
 # Restore from backup if needed (use admin key)
-curl "https://your_app_id-dsn.algolia.net/1/indexes/saros-sdk-docs/batch" \
+curl "https://your_app_id-dsn.algolia.net/1/indexes/saros-docs/batch" \
   -X POST \
   -H "X-Algolia-Application-Id: your_app_id" \
   -H "X-Algolia-API-Key: your_admin_key" \

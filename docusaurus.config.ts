@@ -229,7 +229,7 @@ const config: Config = {
       apiKey: process.env.ALGOLIA_SEARCH_API_KEY || '1234567890abcdef1234567890abcdef',
       
       // Index name for Saros SDK documentation
-      indexName: process.env.ALGOLIA_INDEX_NAME || 'saros-sdk-docs',
+      indexName: process.env.ALGOLIA_INDEX_NAME || 'saros-docs',
       
       // Contextual search for better results
       contextualSearch: true,

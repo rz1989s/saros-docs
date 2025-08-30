@@ -1,5 +1,5 @@
 {
-  "name": "saros-sdk-docs",
+  "name": "saros-docs",
   "buildCommand": "npm run build",
   "outputDirectory": "build",
   "installCommand": "npm install"
