@@ -1,8 +1,8 @@
 # Saros SDK Guide Challenge Submission
 
-**Submission Date**: August 29, 2025  
+**Submission Date**: August 30, 2025  
 **Live Site**: https://saros-docs.rectorspace.com  
-**Repository**: https://github.com/saros-xyz/saros-sdk-docs  
+**Repository**: https://github.com/rz1989s/saros-sdk-docs  
 
 ---
 
@@ -226,7 +226,7 @@ All examples tested against current SDK versions with proper error handling:
 
 - **Live Documentation**: https://saros-docs.rectorspace.com
 - **Developer Support**: https://t.me/+DLLPYFzvTzJmNTJh
-- **GitHub Repository**: https://github.com/saros-xyz/saros-sdk-docs
+- **GitHub Repository**: https://github.com/rz1989s/saros-sdk-docs
 - **Feedback**: Submit issues and feature requests via GitHub
 
 ---
