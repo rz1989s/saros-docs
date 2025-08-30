@@ -1079,9 +1079,9 @@ interface SimulationResult {
 ## Next Steps
 
 ✅ Position management mastered  
-➡️ **Next**: [DLMM API Reference](/docs/dlmm-sdk/api-reference)
+➡️ **Next**: [DLMM API Reference](api-reference)
 
 Or explore practical applications:
-- [DLMM Position Manager Tutorial](/docs/examples/dlmm-position-creator)
-- [Advanced Range Strategies](/docs/examples/arbitrage-bot)
-- [Rust DLMM SDK](/docs/rust-sdk/getting-started) for high-performance trading
+- [DLMM Position Manager Tutorial](../examples/dlmm-position-creator)
+- [Advanced Range Strategies](../examples/arbitrage-bot)
+- [Rust DLMM SDK](../rust-sdk/getting-started) for high-performance trading
