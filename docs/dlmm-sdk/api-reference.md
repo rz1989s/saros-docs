@@ -1120,9 +1120,9 @@ export function PositionManager({ pool, walletAddress }: PositionManagerProps) {
 ## Next Steps
 
 ✅ DLMM position management mastered  
-➡️ **Next**: [Rust SDK Documentation](/docs/rust-sdk/getting-started)
+➡️ **Next**: [Rust SDK Documentation](../rust-sdk/getting-started)
 
 Or dive into practical applications:
-- [DLMM Position Manager Tutorial](/docs/examples/dlmm-position-creator)
-- [Market Making Examples](/docs/examples/arbitrage-bot)
-- [Portfolio Optimization](/docs/examples/portfolio-analytics-dashboard)
+- [DLMM Position Manager Tutorial](../examples/dlmm-position-creator)
+- [Market Making Examples](../examples/arbitrage-bot)
+- [Portfolio Optimization](../examples/portfolio-analytics-dashboard)

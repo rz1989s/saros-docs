@@ -181,8 +181,16 @@ const config: Config = {
               href: 'https://discord.gg/sarosfinance',
             },
             {
-              label: 'Twitter',
-              href: 'https://twitter.com/SarosFinance',
+              label: 'X (Twitter)',
+              href: 'https://x.com/saros_xyz',
+            },
+            {
+              label: 'YouTube',
+              href: 'https://www.youtube.com/@saros_xyz',
+            },
+            {
+              label: 'Sarosians Hub',
+              href: 'https://x.com/i/communities/1919946232866472247',
             },
             {
               label: 'Developer Support',

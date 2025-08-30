@@ -1047,9 +1047,9 @@ MEV protection adds overhead:
 
 ## Related Examples
 
-- [Real-Time Price Feed](/docs/examples/realtime-price-feed) - Market monitoring
-- [Automated Trading Bot](/docs/examples/automated-trading-bot) - Bot integration
-- [Arbitrage Detection](/docs/examples/arbitrage-bot) - Cross-market opportunities
+- [Real-Time Price Feed](realtime-price-feed) - Market monitoring
+- [Automated Trading Bot](automated-trading-bot) - Bot integration
+- [Arbitrage Detection](arbitrage-bot) - Cross-market opportunities
 
 ---
 

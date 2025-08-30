@@ -707,9 +707,9 @@ node validate-dlmm-setup.js
 ## Next Steps
 
 ✅ DLMM SDK installed and configured  
-➡️ **Next**: [Concentrated Liquidity Guide](/docs/dlmm-sdk/concentrated-liquidity)
+➡️ **Next**: [Concentrated Liquidity Guide](concentrated-liquidity)
 
 Or explore related topics:
-- [Position Management](/docs/dlmm-sdk/position-management)
-- [DLMM Position Manager Tutorial](/docs/examples/dlmm-position-creator)  
-- [API Reference](/docs/dlmm-sdk/api-reference)
+- [Position Management](position-management)
+- [DLMM Position Manager Tutorial](../examples/dlmm-position-creator)  
+- [API Reference](api-reference)
