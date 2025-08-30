@@ -67,7 +67,7 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/saros-social-card.jpg',
+    image: 'img/saros-social-card.svg',
     colorMode: {
       defaultMode: 'dark',
       disableSwitch: true,
