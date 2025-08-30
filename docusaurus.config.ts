@@ -68,8 +68,13 @@ const config: Config = {
   themeConfig: {
     // Replace with your project's social card
     image: 'img/saros-social-card.jpg',
+    colorMode: {
+      defaultMode: 'dark',
+      disableSwitch: true,
+      respectPrefersColorScheme: false,
+    },
     navbar: {
-      title: 'Saros SDK',
+      hideOnScroll: true,
       logo: {
         alt: 'Saros Finance Logo',
         src: 'img/saros-logo.svg',
@@ -106,30 +111,13 @@ const config: Config = {
           label: 'Tutorials',
         },
         {
-          type: 'docSidebar',
-          sidebarId: 'examplesSidebar',
-          position: 'left',
-          label: 'Examples',
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'toolsSidebar',
-          position: 'left',
-          label: 'Tools',
-        },
-        {
           to: '/docs/interactive-examples',
-          label: '🎮 Try Interactive',
+          label: '🎮 Interactive',
           position: 'left',
         },
         {
           href: 'https://github.com/saros-xyz/saros-sdk',
           label: 'GitHub',
-          position: 'right',
-        },
-        {
-          href: 'https://saros.xyz',
-          label: 'Saros Finance',
           position: 'right',
         },
       ],

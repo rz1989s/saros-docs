@@ -962,4 +962,4 @@ CMD ["npm", "start"]
 - 📚 [DLMM SDK API Reference](/docs/dlmm-sdk/api-reference) - Complete method documentation
 - 🎯 [Position Management Tutorial](/docs/tutorials/managing-concentrated-liquidity) - Advanced techniques
 - 💡 [Strategy Optimization Guide](/docs/tutorials/optimizing-dlmm-strategies) - Professional strategies
-- 🛠️ [Troubleshooting Guide](/docs/troubleshooting#-transaction-errors) - Common issues and solutions
+- 🛠️ [Troubleshooting Guide](/docs/troubleshooting#transaction-errors) - Common issues and solutions

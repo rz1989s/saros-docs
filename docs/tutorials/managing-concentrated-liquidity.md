@@ -1456,7 +1456,7 @@ interface Alert {
 
 ### Resources:
 - 📚 [DLMM SDK Reference](/docs/dlmm-sdk/api-reference) - Complete API documentation
-- 🛠️ [Troubleshooting Guide](/docs/troubleshooting#-transaction-errors) - Common issues and solutions
+- 🛠️ [Troubleshooting Guide](/docs/troubleshooting#transaction-errors) - Common issues and solutions
 - 💬 [Developer Support](https://t.me/+DLLPYFzvTzJmNTJh) - Get help from the community
 - 📊 [Pool Analytics](https://docs.saros.xyz/analytics) - Real-time pool statistics
 

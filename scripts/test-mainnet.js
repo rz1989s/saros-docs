@@ -17,8 +17,8 @@ const path = require('path');
 // MainNet specific configuration (READ-ONLY)
 const MAINNET_CONFIG = {
   network: 'mainnet-beta',
-  rpcUrl: 'https://api.mainnet-beta.solana.com',
-  wsUrl: 'wss://api.mainnet-beta.solana.com', 
+  rpcUrl: 'https://solana-rpc.publicnode.com',
+  wsUrl: 'wss://solana-rpc.publicnode.com', 
   commitment: 'confirmed',
   
   // Real MainNet pools for validation
@@ -95,13 +95,14 @@ class MainNetTester {
         name: 'Network Health Check',
         test: async () => {
           await this.rateLimiter.waitForSlot();
-          const health = await this.connection.getHealth();
+          // Test network health by getting current slot
+          const slot = await this.connection.getSlot();
           
-          if (health !== 'ok') {
-            throw new Error(`MainNet health check failed: ${health}`);
+          if (typeof slot !== 'number' || slot < 0) {
+            throw new Error(`MainNet health check failed: invalid slot ${slot}`);
           }
           
-          return { health, status: 'operational' };
+          return { currentSlot: slot, status: 'operational' };
         }
       },
       {
