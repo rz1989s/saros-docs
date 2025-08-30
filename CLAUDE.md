@@ -14,6 +14,7 @@ This is a Docusaurus-based documentation site for Saros Finance SDKs on Solana. 
 - Start development server: `npm run dev` (binds to 0.0.0.0:3003 for Docker compatibility)
 - Start local server: `npm start` (default port 3000)
 - Build production: `npm run build`
+- Build with bundle analyzer: `npm run build:analyze` (useful for optimization)
 - Serve production build: `npm run serve:build` (port 3003)
 - Clear Docusaurus cache: `npm run clear`
 
@@ -25,6 +26,8 @@ This is a Docusaurus-based documentation site for Saros Finance SDKs on Solana. 
 
 ### Testing & Validation
 - Run all tests: `npm test`
+- Run single test file: `npm test -- path/to/test.test.ts`
+- Watch tests during development: `npm run test:watch`
 - Run tests with coverage: `npm run test:coverage`
 - Test example code: `npm run test:examples`
 - Validate all documentation examples: `npm run validate:examples` (critical - validates TypeScript code blocks)
@@ -50,6 +53,13 @@ This is a Docusaurus-based documentation site for Saros Finance SDKs on Solana. 
 - Deploy to GitHub Pages: `npm run deploy:github`
 - Docker build: `npm run docker:build` && `npm run docker:run`
 
+### Docker Environment Profiles
+- Development with hot reload: `npm run docker:dev` or `docker-compose --profile dev up`
+- Production build: `npm run docker:prod` or `docker-compose --profile prod up -d`
+- Static nginx serving: `docker-compose --profile static up`
+- Build only: `docker-compose --profile build up`
+- Performance testing: `docker-compose --profile test up` (includes Lighthouse)
+
 ## High-Level Architecture
 
 ### Documentation Structure
@@ -74,8 +84,14 @@ The site is organized into multiple documentation sidebars defined in `sidebars.
 
 ### Testing Infrastructure
 - **Jest Configuration**: TypeScript support with custom module mapping in `jest.config.js`
+  - Test timeout: 30 seconds for network operations
+  - Multiple reporters: JUnit XML, HTML, and console output
 - **Mock SDKs**: Test doubles in `__mocks__/@saros-finance/` for SDK packages
 - **Test Setup**: Global test configuration in `tests/setup.ts`
+- **Test Artifacts**: Results generated in `test-results/` directory
+  - HTML test report: `test-results/test-report.html`
+  - JUnit XML: `test-results/junit.xml`
+  - Coverage reports: `coverage/` directory (text, lcov, html formats)
 - **Validation Script**: `scripts/validate-examples.js` validates all TypeScript code blocks in documentation
 - **Network Testing Scripts**: 
   - `scripts/test-devnet.js` - DevNet connectivity and functionality
@@ -120,6 +136,12 @@ Algolia DocSearch is configured but requires real credentials (currently placeho
 
 ## Development Workflow
 
+### Initial Setup
+1. **Clone repository** and install dependencies: `npm install`
+2. **Install Git hooks**: `npm run prepare` (sets up Husky pre-commit hooks)
+3. **Environment Configuration**: Copy `.env.example` to `.env.local` if needed for custom settings
+
+### Development Process
 1. **Adding New Documentation**: Create `.md` or `.mdx` files in appropriate `docs/` subdirectories
    - Update `sidebars.ts` if adding new sections
    - Include visual diagrams from `static/img/` when helpful
@@ -162,6 +184,12 @@ This documentation is optimized for the Saros SDK Guide Challenge with:
 - `scripts/validate-examples.js` - Validates all TypeScript code blocks in documentation
 - `scripts/test-networks.js` - Comprehensive network connectivity testing
 - `scripts/run-integration-tests.js` - Integration test orchestration
+- `scripts/test-algolia.js` - Algolia search configuration testing
+
+### Environment Files
+- `.env.example` - Template for environment configuration
+- `.env.local` - Local development environment variables (create from example)
+- Node.js 18+ required (checked by deploy scripts)
 
 ## Common Troubleshooting
 
@@ -171,9 +199,10 @@ This documentation is optimized for the Saros SDK Guide Challenge with:
 - Always test links with `npm run validate:examples`
 
 ### TypeScript Requirements
-- APIExplorer component requires strict typing - no `any` types allowed
+- APIExplorer component requires strict typing - minimize `any` types (ESLint warns but allows)
 - Use proper interfaces for all SDK mock implementations
 - Cast `unknown` types appropriately when needed
+- TypeScript compilation must pass without errors before committing
 
 ### Network Testing
 - DevNet testing allows state changes and is safe for aggressive testing
