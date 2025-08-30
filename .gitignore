@@ -25,6 +25,11 @@ test-results/
 # Deployment guides (keep private)
 VERCEL_DEPLOYMENT.md
 
+# Submission materials (keep private)
+SUBMISSION.md
+SUBMISSION_GUIDE.md
+saros-sdk-guide-challenge.md
+
 # Logs
 npm-debug.log*
 yarn-debug.log*
