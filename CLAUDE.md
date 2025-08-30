@@ -6,7 +6,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is a Docusaurus-based documentation site for Saros Finance SDKs on Solana. The site provides comprehensive documentation for multiple SDKs (TypeScript, DLMM, and Rust) with interactive examples, tutorials, and API references.
 
-**Challenge Context**: This documentation is part of the Saros SDK Guide Challenge submission (deadline: September 22, 2025) with a $1,500 USDC prize pool. See `SUBMISSION.md` for complete submission details.
+**Live Site**: https://saros-docs.rectorspace.com  
+**Repository**: https://github.com/rz1989s/saros-sdk-docs
 
 ## Common Development Commands
 
@@ -32,6 +33,8 @@ This is a Docusaurus-based documentation site for Saros Finance SDKs on Solana. 
 - Test example code: `npm run test:examples`
 - Validate all documentation examples: `npm run validate:examples` (critical - validates TypeScript code blocks)
 - Check markdown links: `npm run test:links`
+- Validate search configuration: `npm run validate:algolia`
+- Validate build process: `npm run validate:build`
 - Complete CI pipeline: `npm run ci`
 
 #### Network Testing
@@ -51,6 +54,7 @@ This is a Docusaurus-based documentation site for Saros Finance SDKs on Solana. 
 - Deploy to Vercel: `npm run deploy:vercel`
 - Deploy to Netlify: `npm run deploy:netlify`
 - Deploy to GitHub Pages: `npm run deploy:github`
+- Test deployment: `npm run deploy:test`
 - Docker build: `npm run docker:build` && `npm run docker:run`
 
 ### Docker Environment Profiles
@@ -109,6 +113,10 @@ The site is organized into multiple documentation sidebars defined in `sidebars.
   - `swap-flow-diagram.svg` - Token swap process visualization
   - `dlmm-bins-visualization.svg` - Concentrated liquidity comparison
   - `integration-workflow.svg` - Developer integration journey
+- **Submission Assets**: Screenshots and submission materials in `screenshots/submission/`:
+  - 6 required screenshots for challenge submission
+  - Properly named following convention: `1. Home Page - Landing Page.png`, etc.
+  - High-quality PNG format optimized for submission
 
 ## Important Project-Specific Notes
 
@@ -138,8 +146,9 @@ Algolia DocSearch is configured but requires real credentials (currently placeho
 
 ### Initial Setup
 1. **Clone repository** and install dependencies: `npm install`
-2. **Install Git hooks**: `npm run prepare` (sets up Husky pre-commit hooks)
+2. **Install Git hooks**: `npm run prepare` (sets up Husky - note: pre-commit hooks not yet configured)
 3. **Environment Configuration**: Copy `.env.example` to `.env.local` if needed for custom settings
+4. **Node.js Requirements**: Ensure Node.js 18+ is installed (checked by deploy scripts)
 
 ### Development Process
 1. **Adding New Documentation**: Create `.md` or `.mdx` files in appropriate `docs/` subdirectories
@@ -165,12 +174,14 @@ Algolia DocSearch is configured but requires real credentials (currently placeho
 
 ## Challenge Submission Status
 
-This documentation is optimized for the Saros SDK Guide Challenge with:
-- **Required Components**: ✅ All met (quick-start guide, 5 tutorials, 15 examples)
-- **Bonus Components**: ✅ All included (API references, analysis, visual aids, interactive features)
-- **Quality Standards**: ✅ All code tested on devnet/mainnet
-- **Submission Package**: Complete details in `SUBMISSION.md`
-- **Target**: 1st-3rd place positioning with unique interactive features
+**Important**: This documentation was created for the Saros SDK Guide Challenge. For current submission status, deadlines, and detailed requirements, see `SUBMISSION_GUIDE.md`.
+
+Key submission components:
+- **Required Components**: ✅ Quick-start guide, 5+ tutorials, 15+ examples
+- **Bonus Components**: ✅ API references, SDK analysis, visual aids, interactive features  
+- **Quality Standards**: ✅ All code tested on DevNet/MainNet
+- **Submission Assets**: Screenshots ready in `screenshots/submission/`
+- **Live Site**: Production deployment at https://saros-docs.rectorspace.com
 
 ## Critical Project Files
 
@@ -200,11 +211,19 @@ This documentation is optimized for the Saros SDK Guide Challenge with:
 
 ### TypeScript Requirements
 - APIExplorer component requires strict typing - minimize `any` types (ESLint warns but allows)
+- ESLint Configuration: `@typescript-eslint/no-explicit-any` is set to 'warn' (not error)
 - Use proper interfaces for all SDK mock implementations
 - Cast `unknown` types appropriately when needed
 - TypeScript compilation must pass without errors before committing
+- Note: Lint-staged is installed but not yet configured for pre-commit hooks
 
 ### Network Testing
 - DevNet testing allows state changes and is safe for aggressive testing
+  - Uses faucet for funding - no real SOL required
+  - Can perform state-changing operations safely
+  - Aggressive testing mode available with `--all` flag
 - MainNet testing is read-only and validates real pool data
-- Network scripts generate detailed reports in `test-results/` directory
+  - CRITICAL: Read-only operations only
+  - Validates actual pool existence and data integrity
+  - No state changes allowed for safety
+- Network scripts generate detailed reports in `test-results/` directory with comprehensive coverage metrics
