@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" style="background: #f8f9fa; border-radius: 8px;">
   <defs>
     <linearGradient id="workflowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -38,7 +39,7 @@
     
     <text x="300" y="130" style="font-family: Arial, sans-serif; font-size: 11px; fill: #374151;">🔨 Build core features</text>
     <text x="300" y="145" style="font-family: Arial, sans-serif; font-size: 11px; fill: #374151;">🧪 Test on devnet</text>
-    <text x="300" y="160" style="font-family: Arial, sans-serif; font-size: 11px; fill: #374151;">🐛 Debug & optimize</text>
+    <text x="300" y="160" style="font-family: Arial, sans-serif; font-size: 11px; fill: #374151;">🐛 Debug &amp; optimize</text>
     <text x="300" y="175" style="font-family: Arial, sans-serif; font-size: 11px; fill: #374151;">⏱️ Time: 2-5 hours</text>
   </g>
   
@@ -179,7 +180,7 @@
   <text x="80" y="320" style="font-family: 'Courier New', monospace; font-size: 9px; fill: #e5e7eb;">  connection, fromAccount,</text>
   <text x="80" y="335" style="font-family: 'Courier New', monospace; font-size: 9px; fill: #e5e7eb;">  toAccount, amount</text>
   <text x="80" y="350" style="font-family: 'Courier New', monospace; font-size: 9px; fill: #e5e7eb;">);</text>
-  <text x="80" y="365" style="font-family: 'Courier New', monospace; font-size: 9px; fill: #10b981;">// ✅ Simple & straightforward</text>
+  <text x="80" y="365" style="font-family: 'Courier New', monospace; font-size: 9px; fill: #10b981;">// ✅ Simple &amp; straightforward</text>
   
   <!-- DLMM Example -->
   <rect x="330" y="260" width="240" height="120" rx="3" fill="#111827"/>
@@ -195,9 +196,9 @@
   <rect x="590" y="260" width="240" height="120" rx="3" fill="#111827"/>
   <text x="600" y="275" style="font-family: 'Courier New', monospace; font-size: 9px; fill: #6b7280;">// Rust SDK - High Performance</text>
   <text x="600" y="290" style="font-family: 'Courier New', monospace; font-size: 9px; fill: #e5e7eb;">use saros_dlmm_sdk::DlmmPool;</text>
-  <text x="600" y="305" style="font-family: 'Courier New', monospace; font-size: 9px; fill: #e5e7eb;">let pool = DlmmPool::load(&connection, &pool_key)?;</text>
+  <text x="600" y="305" style="font-family: 'Courier New', monospace; font-size: 9px; fill: #e5e7eb;">let pool = DlmmPool::load(&amp;connection, &amp;pool_key)?;</text>
   <text x="600" y="320" style="font-family: 'Courier New', monospace; font-size: 9px; fill: #e5e7eb;">let quote = pool.get_swap_quote(amount, true)?;</text>
-  <text x="600" y="335" style="font-family: 'Courier New', monospace; font-size: 9px; fill: #e5e7eb;">let tx = pool.swap(&quote, &user_key)?;</text>
-  <text x="600" y="350" style="font-family: 'Courier New', monospace; font-size: 9px; fill: #e5e7eb;">client.send_transaction(&tx).await?;</text>
+  <text x="600" y="335" style="font-family: 'Courier New', monospace; font-size: 9px; fill: #e5e7eb;">let tx = pool.swap(&amp;quote, &amp;user_key)?;</text>
+  <text x="600" y="350" style="font-family: 'Courier New', monospace; font-size: 9px; fill: #e5e7eb;">client.send_transaction(&amp;tx).await?;</text>
   <text x="600" y="365" style="font-family: 'Courier New', monospace; font-size: 9px; fill: #10b981;">// 🚀 Zero-copy, maximum speed</text>
 </svg>

@@ -1049,9 +1049,9 @@ describe('Concentrated Liquidity', () => {
 
 ✅ DLMM SDK installed and configured  
 ✅ Concentrated liquidity concepts understood  
-➡️ **Next**: [Position Management](/docs/dlmm-sdk/position-management)
+➡️ **Next**: [Position Management](position-management)
 
 Or dive into practical applications:
-- [DLMM Position Manager Tutorial](/docs/examples/dlmm-position-creator)
-- [Market Making Examples](/docs/examples/arbitrage-bot)
-- [API Reference](/docs/dlmm-sdk/api-reference)
+- [DLMM Position Manager Tutorial](../examples/dlmm-position-creator)
+- [Market Making Examples](../examples/arbitrage-bot)
+- [API Reference](api-reference)

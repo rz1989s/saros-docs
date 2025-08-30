@@ -274,11 +274,11 @@ DLMM reduces impermanent loss through:
 
 ## Learning Path
 
-1. **[Installation Guide](/docs/dlmm-sdk/installation)** - Set up the DLMM SDK
-2. **[Concentrated Liquidity Basics](/docs/dlmm-sdk/concentrated-liquidity)** - Understand the concepts
-3. **[Position Management](/docs/dlmm-sdk/position-management)** - Create and manage positions
-4. **[API Reference](/docs/dlmm-sdk/api-reference)** - Complete function documentation
-5. **[Advanced Examples](/docs/examples/dlmm-position-creator)** - Build sophisticated applications
+1. **[Installation Guide](installation)** - Set up the DLMM SDK
+2. **[Concentrated Liquidity Basics](concentrated-liquidity)** - Understand the concepts
+3. **[Position Management](position-management)** - Create and manage positions
+4. **[API Reference](api-reference)** - Complete function documentation
+5. **[Advanced Examples](../examples/dlmm-position-creator)** - Build sophisticated applications
 
 ## Resources
 
@@ -287,4 +287,4 @@ DLMM reduces impermanent loss through:
 - **Tutorials**: Step-by-step implementation guides  
 - **Examples**: Working code you can copy and modify
 
-Ready to dive in? Start with [DLMM Installation](/docs/dlmm-sdk/installation)!
+Ready to dive in? Start with [DLMM Installation](installation)!

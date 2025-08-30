@@ -67,7 +67,7 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/saros-social-card.jpg',
+    image: 'img/saros-social-card.svg',
     colorMode: {
       defaultMode: 'dark',
       disableSwitch: true,
@@ -109,6 +109,12 @@ const config: Config = {
           sidebarId: 'tutorialsSidebar',
           position: 'left',
           label: 'Tutorials',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'toolsSidebar',
+          position: 'left',
+          label: 'Tools',
         },
         {
           to: '/docs/interactive-examples',
@@ -175,8 +181,16 @@ const config: Config = {
               href: 'https://discord.gg/sarosfinance',
             },
             {
-              label: 'Twitter',
-              href: 'https://twitter.com/SarosFinance',
+              label: 'X (Twitter)',
+              href: 'https://x.com/saros_xyz',
+            },
+            {
+              label: 'YouTube',
+              href: 'https://www.youtube.com/@saros_xyz',
+            },
+            {
+              label: 'Sarosians Hub',
+              href: 'https://x.com/i/communities/1919946232866472247',
             },
             {
               label: 'Developer Support',

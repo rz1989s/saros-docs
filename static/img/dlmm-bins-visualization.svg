@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" style="background: #f8f9fa; border-radius: 8px;">
   <defs>
     <linearGradient id="binGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -16,7 +17,7 @@
   
   <!-- Title -->
   <text x="400" y="30" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 20px; font-weight: bold; fill: #374151;">
-    DLMM Bin Distribution & Liquidity Concentration
+    DLMM Bin Distribution &amp; Liquidity Concentration
   </text>
   
   <!-- Price Axis -->

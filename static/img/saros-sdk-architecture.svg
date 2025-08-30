@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" style="background: #f8f9fa; border-radius: 8px;">
   <defs>
     <linearGradient id="primaryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -37,7 +38,7 @@
     <text x="65" y="173" style="font-family: Arial, sans-serif; font-size: 11px; fill: white;">• Liquidity Management</text>
     
     <rect x="60" y="185" width="180" height="20" rx="3" fill="rgba(255,255,255,0.2)"/>
-    <text x="65" y="198" style="font-family: Arial, sans-serif; font-size: 11px; fill: white;">• Staking & Farming</text>
+    <text x="65" y="198" style="font-family: Arial, sans-serif; font-size: 11px; fill: white;">• Staking &amp; Farming</text>
     
     <rect x="60" y="210" width="180" height="20" rx="3" fill="rgba(255,255,255,0.2)"/>
     <text x="65" y="223" style="font-family: Arial, sans-serif; font-size: 11px; fill: white;">• Portfolio Analytics</text>

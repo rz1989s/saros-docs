@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" style="background: #f8f9fa; border-radius: 8px;">
   <defs>
     <linearGradient id="flowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -21,7 +22,7 @@
     <text x="100" y="108" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 11px; fill: white;">Init</text>
     <rect x="50" y="150" width="100" height="40" rx="5" fill="#f3f4f6" stroke="#d1d5db"/>
     <text x="100" y="165" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 10px; fill: #374151;">Setup Connection</text>
-    <text x="100" y="178" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 10px; fill: #374151;">& Wallet</text>
+    <text x="100" y="178" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 10px; fill: #374151;">&amp; Wallet</text>
   </g>
   
   <!-- Step 2 -->
@@ -31,7 +32,7 @@
     <text x="250" y="108" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 11px; fill: white;">Quote</text>
     <rect x="200" y="150" width="100" height="40" rx="5" fill="#f3f4f6" stroke="#d1d5db"/>
     <text x="250" y="165" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 10px; fill: #374151;">Get Swap Quote</text>
-    <text x="250" y="178" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 10px; fill: #374151;">& Price Impact</text>
+    <text x="250" y="178" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 10px; fill: #374151;">&amp; Price Impact</text>
   </g>
   
   <!-- Step 3 -->
@@ -41,7 +42,7 @@
     <text x="400" y="108" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 11px; fill: white;">Valid</text>
     <rect x="350" y="150" width="100" height="40" rx="5" fill="#f3f4f6" stroke="#d1d5db"/>
     <text x="400" y="165" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 10px; fill: #374151;">Validate Params</text>
-    <text x="400" y="178" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 10px; fill: #374151;">& Balances</text>
+    <text x="400" y="178" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 10px; fill: #374151;">&amp; Balances</text>
   </g>
   
   <!-- Step 4 -->
@@ -60,7 +61,7 @@
     <text x="700" y="95" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; fill: white;">5</text>
     <text x="700" y="108" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 11px; fill: white;">Conf</text>
     <rect x="650" y="150" width="100" height="40" rx="5" fill="#f3f4f6" stroke="#d1d5db"/>
-    <text x="700" y="165" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 10px; fill: #374151;">Confirm & Return</text>
+    <text x="700" y="165" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 10px; fill: #374151;">Confirm &amp; Return</text>
     <text x="700" y="178" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 10px; fill: #374151;">Transaction Hash</text>
   </g>
   
