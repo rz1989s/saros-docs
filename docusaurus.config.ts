@@ -111,6 +111,12 @@ const config: Config = {
           label: 'Tutorials',
         },
         {
+          type: 'docSidebar',
+          sidebarId: 'toolsSidebar',
+          position: 'left',
+          label: 'Tools',
+        },
+        {
           to: '/docs/interactive-examples',
           label: '🎮 Interactive',
           position: 'left',
