@@ -2,11 +2,16 @@
 
 > Comprehensive developer documentation for Saros Finance SDKs on Solana
 
+[![1st Place](https://img.shields.io/badge/Saros%20SDK%20Guide%20Challenge-1st%20Place%20%F0%9F%8F%86-gold)](https://saros-docs.rectorspace.com)
 [![Deploy Status](https://img.shields.io/badge/deploy-automated-brightgreen)](https://github.com/saros-xyz/saros-sdk-docs/actions)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Node Version](https://img.shields.io/badge/node-%3E%3D16-brightgreen)](https://nodejs.org/)
 
 **Live Site**: [saros-docs.rectorspace.com](https://saros-docs.rectorspace.com)
+
+## Award
+
+**1st Place Winner** - Saros SDK Guide Challenge (December 2024) - 300 USDC
 
 This documentation site provides comprehensive guides, tutorials, and API references for all Saros Finance SDKs, built with [Docusaurus 3](https://docusaurus.io/).
 
